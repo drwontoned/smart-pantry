@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartPantryApp
+namespace WinForm___SmartPantry
 {
     public class Product
     {
         // name, stock, type, location, expiration dates, and prices fields
-        
+
         // absolutely necessary fields
         private string name = string.Empty;
         private int stock = 0;
@@ -19,7 +19,7 @@ namespace SmartPantryApp
         private string location = string.Empty;
         private List<ExpirationDate> expirationDates = new List<ExpirationDate>();
         private List<double> prices = new List<double>();
-        
+
 
         // getters and setters for all fields
         public string Name { get => this.name; set => this.name = value; }
@@ -82,7 +82,7 @@ namespace SmartPantryApp
             this.stock -= newStock;
 
             // if the user input to remove more stock than available set the stock to 0
-            if(this.stock < 0)
+            if (this.stock < 0)
             {
                 stock = 0;
             }
@@ -107,7 +107,7 @@ namespace SmartPantryApp
                         updatedStock = 0;
                     }
                     this.expirationDates[i].updateAmount(updatedStock);
-                    
+
                     // also update overall stock
                     this.removeStock(newStock);
                 }
@@ -124,13 +124,32 @@ namespace SmartPantryApp
             // for each expiration date create a formatted string Date - Amount and then a new line
             for (int i = 0; i < this.expirationDates.Count; i++)
             {
-                datesAndAmounts += this.expirationDates[i].Date + " - " + this.expirationDates[i].Amount+"\r\n";
+                datesAndAmounts += this.expirationDates[i].Date + " - " + this.expirationDates[i].Amount + "\r\n";
             }
 
             // return the string with all the dates and amounts
             return datesAndAmounts;
         }
 
+        public string getOldestDate()
+        {
+            string oldestDate = string.Empty;
+            for (int i = 0; i < this.expirationDates.Count; i++)
+            {
+                if (i == 0)
+                {
+                    oldestDate = this.expirationDates[i].Date;
+                }
+                else
+                {
+                    if (oldestDate.CompareTo(this.expirationDates[i].Date) > 0)
+                    {
+                        oldestDate = this.expirationDates[i].Date;
+                    }
+                }
+            }
+            return oldestDate;
+        }
         public double getAveragePrice()
         {
             double average = 0;

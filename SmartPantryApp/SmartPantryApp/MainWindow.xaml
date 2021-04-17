@@ -6,12 +6,7 @@
         xmlns:local="clr-namespace:SmartPantryApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" VerticalAlignment="Top" Width="260">
-            <DataGrid.Columns>
-                <DataGridTextColumn/>
-            </DataGrid.Columns>
-        </DataGrid>
+    <ListBox x:Name="HomePagePantry" HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="365" Margin="10,10,0,0">
 
-    </Grid>
+    </ListBox>
 </Window>
