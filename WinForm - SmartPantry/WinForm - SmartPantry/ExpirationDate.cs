@@ -8,7 +8,7 @@ namespace WinForm___SmartPantry
 {
     public class ExpirationDate
     {
-        // experation date and amount expiring fields
+        // expiration date and amount expiring fields
         private string date = string.Empty;
         private int amount = 0;
 

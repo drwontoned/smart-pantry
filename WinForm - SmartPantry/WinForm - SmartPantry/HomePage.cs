@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace WinForm___SmartPantry
 {
-    public partial class Form1 : Form
+    public partial class HomePage : Form
     {
         public Pantry PersonsPantry = new Pantry();
-        public Form1()
+
+        public HomePage()
         {
             InitializeComponent();
 
@@ -28,7 +29,7 @@ namespace WinForm___SmartPantry
             WholeMilk.addStock("04/20/2021", 1);
 
             Product Vodka = new Product("Vodka", 0);
-            Vodka.Type = "Alchohol";
+            Vodka.Type = "Alcohol";
             Vodka.Location = "Liquor Cabinet";
             Vodka.addStock("4/15/2036", 1);
 
@@ -60,6 +61,17 @@ namespace WinForm___SmartPantry
             productText += "x" + p.Stock;
 
             return productText;
+        }
+
+        // Event method for pressing the "View Shopping List" button.
+        private void viewShoppingListButton_Click(object sender, EventArgs e)
+        {
+            var frm = new ShoppingList(this);
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
         }
     }
 }

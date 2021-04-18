@@ -30,6 +30,24 @@ namespace WinForm___SmartPantry
             this.pantryList = SortList(this.pantryList);
         }
 
+        // Method for removing a product from the pantry
+        public void removeFromPantry(Product p)
+        {
+            this.pantryList.Remove(p);
+            this.pantryList = SortList(this.pantryList);
+        }
+
+        // Method for removing multiple items by index
+        public void removeMultipleByIndices(int[] indices)
+        {
+            foreach (int index in indices)
+            {
+                this.pantryList.RemoveAt(index);
+            }
+
+            this.pantryList = SortList(this.pantryList);
+        }
+
         // Method for getting a product from the pantry based on an input name
         public Product getProductByName(string name)
         {
