@@ -31,6 +31,7 @@ namespace WinForm___SmartPantry
         {
             this.homeButton = new System.Windows.Forms.Button();
             this.sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // homeButton
@@ -53,17 +54,30 @@ namespace WinForm___SmartPantry
             this.sfCalendar1.Size = new System.Drawing.Size(469, 344);
             this.sfCalendar1.TabIndex = 3;
             this.sfCalendar1.Text = "sfCalendar1";
+            this.sfCalendar1.Click += new System.EventHandler(this.sfCalendar1_Click);
+            this.sfCalendar1.SelectionChanging += sfCalendar1_SelectionChanging;
+            this.sfCalendar1.SelectionChanged += sfCalendar1_SelectionChanged;
+            this.sfCalendar1.CellClick += sfCalendar1_CellClick;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 368);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.sfCalendar1);
             this.Controls.Add(this.homeButton);
             this.Name = "Calendar";
             this.Text = "Calendar";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,5 +85,6 @@ namespace WinForm___SmartPantry
 
         private System.Windows.Forms.Button homeButton;
         private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
