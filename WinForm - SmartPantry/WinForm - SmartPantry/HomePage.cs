@@ -31,7 +31,7 @@ namespace WinForm___SmartPantry
             Product Vodka = new Product("Vodka", 0);
             Vodka.Type = "Alcohol";
             Vodka.Location = "Liquor Cabinet";
-            Vodka.addStock("4/15/2036", 1);
+            Vodka.addStock("04/15/2036", 1);
 
             // add products to pantry
             PersonsPantry.addToPantry(CinnamonToastCrunch);
@@ -67,6 +67,16 @@ namespace WinForm___SmartPantry
         private void viewShoppingListButton_Click(object sender, EventArgs e)
         {
             var frm = new ShoppingList(this);
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
+
+        private void viewExpirationDatesButton_Click(object sender, EventArgs e)
+        {
+            var frm = new Calendar(this);
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
             frm.FormClosing += delegate { this.Show(); };
