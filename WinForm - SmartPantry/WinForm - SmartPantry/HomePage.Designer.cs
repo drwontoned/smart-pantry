@@ -33,7 +33,7 @@
             this.viewExpirationDatesButton = new System.Windows.Forms.Button();
             this.viewShoppingListButton = new System.Windows.Forms.Button();
             this.HomePagePantry = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.personsPantryLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // viewPantryButton
@@ -100,23 +100,23 @@
             this.HomePagePantry.Size = new System.Drawing.Size(523, 563);
             this.HomePagePantry.TabIndex = 4;
             // 
-            // label1
+            // personsPantryLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 61);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Person\'s Pantry";
+            this.personsPantryLabel.AutoSize = true;
+            this.personsPantryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personsPantryLabel.Location = new System.Drawing.Point(82, 17);
+            this.personsPantryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.personsPantryLabel.Name = "personsPantryLabel";
+            this.personsPantryLabel.Size = new System.Drawing.Size(398, 61);
+            this.personsPantryLabel.TabIndex = 5;
+            this.personsPantryLabel.Text = "Person\'s Pantry";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 708);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.personsPantryLabel);
             this.Controls.Add(this.HomePagePantry);
             this.Controls.Add(this.viewShoppingListButton);
             this.Controls.Add(this.viewExpirationDatesButton);
@@ -137,7 +137,7 @@
         private System.Windows.Forms.Button viewExpirationDatesButton;
         private System.Windows.Forms.Button viewShoppingListButton;
         private System.Windows.Forms.ListBox HomePagePantry;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label personsPantryLabel;
     }
 }
 

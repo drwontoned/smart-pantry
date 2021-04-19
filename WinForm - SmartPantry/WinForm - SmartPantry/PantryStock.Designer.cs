@@ -31,15 +31,7 @@ namespace WinForm___SmartPantry
         {
             this.components = new System.ComponentModel.Container();
             this.homeButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.pantryStockListView = new System.Windows.Forms.ListView();
-            this.initialColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.typeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.locationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.stockColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label2 = new System.Windows.Forms.Label();
+            this.personsPantryLabel = new System.Windows.Forms.Label();
             this.alphaCheckBox = new System.Windows.Forms.CheckBox();
             this.typeCheckBox = new System.Windows.Forms.CheckBox();
             this.locationCheckBox = new System.Windows.Forms.CheckBox();
@@ -51,12 +43,20 @@ namespace WinForm___SmartPantry
             this.removeButton = new System.Windows.Forms.Button();
             this.sortOptionsGroupBox = new System.Windows.Forms.GroupBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.pantryStockGroupBox = new System.Windows.Forms.GroupBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pantryStockListView = new System.Windows.Forms.ListView();
+            this.initialColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.typeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.locationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stockColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pantryStockGroupBox = new System.Windows.Forms.GroupBox();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.searchForProductLabel = new System.Windows.Forms.Label();
             this.actionsGroupBox.SuspendLayout();
             this.sortOptionsGroupBox.SuspendLayout();
-            this.pantryStockGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.pantryStockGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // homeButton
@@ -71,84 +71,16 @@ namespace WinForm___SmartPantry
             this.homeButton.UseVisualStyleBackColor = false;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
-            // label1
+            // personsPantryLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
-            this.label1.Location = new System.Drawing.Point(539, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 61);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Person\'s Pantry";
-            // 
-            // searchTextBox
-            // 
-            this.searchTextBox.Location = new System.Drawing.Point(31, 42);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(6);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(889, 31);
-            this.searchTextBox.TabIndex = 5;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
-            // 
-            // pantryStockListView
-            // 
-            this.pantryStockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.initialColumnHeader,
-            this.nameColumnHeader,
-            this.typeColumnHeader,
-            this.locationColumnHeader,
-            this.stockColumnHeader});
-            this.pantryStockListView.FullRowSelect = true;
-            this.pantryStockListView.GridLines = true;
-            this.pantryStockListView.HideSelection = false;
-            this.pantryStockListView.Location = new System.Drawing.Point(31, 105);
-            this.pantryStockListView.Margin = new System.Windows.Forms.Padding(6);
-            this.pantryStockListView.MultiSelect = false;
-            this.pantryStockListView.Name = "pantryStockListView";
-            this.pantryStockListView.Size = new System.Drawing.Size(889, 472);
-            this.pantryStockListView.TabIndex = 6;
-            this.pantryStockListView.UseCompatibleStateImageBehavior = false;
-            this.pantryStockListView.View = System.Windows.Forms.View.Details;
-            // 
-            // initialColumnHeader
-            // 
-            this.initialColumnHeader.Text = "";
-            this.initialColumnHeader.Width = 0;
-            // 
-            // nameColumnHeader
-            // 
-            this.nameColumnHeader.Text = "Name";
-            this.nameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nameColumnHeader.Width = 192;
-            // 
-            // typeColumnHeader
-            // 
-            this.typeColumnHeader.Text = "Type";
-            this.typeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.typeColumnHeader.Width = 50;
-            // 
-            // locationColumnHeader
-            // 
-            this.locationColumnHeader.Text = "Location";
-            this.locationColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.locationColumnHeader.Width = 160;
-            // 
-            // stockColumnHeader
-            // 
-            this.stockColumnHeader.Text = "Stock";
-            this.stockColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.stockColumnHeader.Width = 40;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Search for Product...";
+            this.personsPantryLabel.AutoSize = true;
+            this.personsPantryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
+            this.personsPantryLabel.Location = new System.Drawing.Point(481, 14);
+            this.personsPantryLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.personsPantryLabel.Name = "personsPantryLabel";
+            this.personsPantryLabel.Size = new System.Drawing.Size(398, 61);
+            this.personsPantryLabel.TabIndex = 4;
+            this.personsPantryLabel.Text = "Person\'s Pantry";
             // 
             // alphaCheckBox
             // 
@@ -250,7 +182,7 @@ namespace WinForm___SmartPantry
             this.actionsGroupBox.Controls.Add(this.addButton);
             this.actionsGroupBox.Location = new System.Drawing.Point(12, 104);
             this.actionsGroupBox.Name = "actionsGroupBox";
-            this.actionsGroupBox.Size = new System.Drawing.Size(188, 600);
+            this.actionsGroupBox.Size = new System.Drawing.Size(188, 588);
             this.actionsGroupBox.TabIndex = 16;
             this.actionsGroupBox.TabStop = false;
             // 
@@ -275,7 +207,7 @@ namespace WinForm___SmartPantry
             this.sortOptionsGroupBox.Controls.Add(this.locationCheckBox);
             this.sortOptionsGroupBox.Location = new System.Drawing.Point(12, 244);
             this.sortOptionsGroupBox.Name = "sortOptionsGroupBox";
-            this.sortOptionsGroupBox.Size = new System.Drawing.Size(170, 348);
+            this.sortOptionsGroupBox.Size = new System.Drawing.Size(170, 338);
             this.sortOptionsGroupBox.TabIndex = 17;
             this.sortOptionsGroupBox.TabStop = false;
             this.sortOptionsGroupBox.Text = "Sort Products";
@@ -290,17 +222,85 @@ namespace WinForm___SmartPantry
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
             // 
+            // pantryStockListView
+            // 
+            this.pantryStockListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.initialColumnHeader,
+            this.nameColumnHeader,
+            this.typeColumnHeader,
+            this.locationColumnHeader,
+            this.stockColumnHeader});
+            this.pantryStockListView.FullRowSelect = true;
+            this.pantryStockListView.GridLines = true;
+            this.pantryStockListView.HideSelection = false;
+            this.pantryStockListView.Location = new System.Drawing.Point(31, 117);
+            this.pantryStockListView.Margin = new System.Windows.Forms.Padding(6);
+            this.pantryStockListView.MultiSelect = false;
+            this.pantryStockListView.Name = "pantryStockListView";
+            this.pantryStockListView.Size = new System.Drawing.Size(889, 483);
+            this.pantryStockListView.TabIndex = 6;
+            this.pantryStockListView.UseCompatibleStateImageBehavior = false;
+            this.pantryStockListView.View = System.Windows.Forms.View.Details;
+            // 
+            // initialColumnHeader
+            // 
+            this.initialColumnHeader.Text = "";
+            this.initialColumnHeader.Width = 0;
+            // 
+            // nameColumnHeader
+            // 
+            this.nameColumnHeader.Text = "Name";
+            this.nameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nameColumnHeader.Width = 192;
+            // 
+            // typeColumnHeader
+            // 
+            this.typeColumnHeader.Text = "Type";
+            this.typeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.typeColumnHeader.Width = 50;
+            // 
+            // locationColumnHeader
+            // 
+            this.locationColumnHeader.Text = "Location";
+            this.locationColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.locationColumnHeader.Width = 160;
+            // 
+            // stockColumnHeader
+            // 
+            this.stockColumnHeader.Text = "Stock";
+            this.stockColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.stockColumnHeader.Width = 40;
+            // 
             // pantryStockGroupBox
             // 
             this.pantryStockGroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pantryStockGroupBox.Controls.Add(this.pantryStockListView);
-            this.pantryStockGroupBox.Controls.Add(this.label2);
+            this.pantryStockGroupBox.Controls.Add(this.searchForProductLabel);
             this.pantryStockGroupBox.Controls.Add(this.searchTextBox);
-            this.pantryStockGroupBox.Location = new System.Drawing.Point(215, 116);
+            this.pantryStockGroupBox.Location = new System.Drawing.Point(219, 78);
             this.pantryStockGroupBox.Name = "pantryStockGroupBox";
-            this.pantryStockGroupBox.Size = new System.Drawing.Size(946, 588);
+            this.pantryStockGroupBox.Size = new System.Drawing.Size(946, 614);
             this.pantryStockGroupBox.TabIndex = 17;
             this.pantryStockGroupBox.TabStop = false;
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(31, 33);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(889, 31);
+            this.searchTextBox.TabIndex = 5;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            // 
+            // searchForProductLabel
+            // 
+            this.searchForProductLabel.AutoSize = true;
+            this.searchForProductLabel.Location = new System.Drawing.Point(26, 8);
+            this.searchForProductLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.searchForProductLabel.Name = "searchForProductLabel";
+            this.searchForProductLabel.Size = new System.Drawing.Size(209, 25);
+            this.searchForProductLabel.TabIndex = 7;
+            this.searchForProductLabel.Text = "Search for Product...";
             // 
             // PantryStock
             // 
@@ -309,7 +309,7 @@ namespace WinForm___SmartPantry
             this.ClientSize = new System.Drawing.Size(1173, 708);
             this.Controls.Add(this.pantryStockGroupBox);
             this.Controls.Add(this.actionsGroupBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.personsPantryLabel);
             this.Controls.Add(this.homeButton);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "PantryStock";
@@ -317,9 +317,9 @@ namespace WinForm___SmartPantry
             this.actionsGroupBox.ResumeLayout(false);
             this.sortOptionsGroupBox.ResumeLayout(false);
             this.sortOptionsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.pantryStockGroupBox.ResumeLayout(false);
             this.pantryStockGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,10 +328,7 @@ namespace WinForm___SmartPantry
         #endregion
 
         private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox searchTextBox;
-        private System.Windows.Forms.ListView pantryStockListView;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label personsPantryLabel;
         private System.Windows.Forms.CheckBox alphaCheckBox;
         private System.Windows.Forms.CheckBox typeCheckBox;
         private System.Windows.Forms.CheckBox locationCheckBox;
@@ -343,12 +340,15 @@ namespace WinForm___SmartPantry
         private System.Windows.Forms.GroupBox sortOptionsGroupBox;
         private System.Windows.Forms.Button removeButton;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.GroupBox pantryStockGroupBox;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ListView pantryStockListView;
         private System.Windows.Forms.ColumnHeader initialColumnHeader;
         private System.Windows.Forms.ColumnHeader nameColumnHeader;
         private System.Windows.Forms.ColumnHeader typeColumnHeader;
-        private System.Windows.Forms.ColumnHeader stockColumnHeader;
         private System.Windows.Forms.ColumnHeader locationColumnHeader;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.ColumnHeader stockColumnHeader;
+        private System.Windows.Forms.GroupBox pantryStockGroupBox;
+        private System.Windows.Forms.Label searchForProductLabel;
+        private System.Windows.Forms.TextBox searchTextBox;
     }
 }

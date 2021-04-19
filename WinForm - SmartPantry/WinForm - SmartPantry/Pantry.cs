@@ -37,6 +37,11 @@ namespace WinForm___SmartPantry
             this.pantryList = SortList(this.pantryList);
         }
 
+        public void removeByIndex(int i)
+        {
+            this.PantryList.RemoveAt(i);
+        }
+
         // Method for removing multiple items by index
         public void removeMultipleByIndices(int[] indices)
         {

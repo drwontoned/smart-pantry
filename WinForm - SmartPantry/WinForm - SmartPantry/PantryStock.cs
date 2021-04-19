@@ -55,7 +55,11 @@ namespace WinForm___SmartPantry
 
             if (!(foundItem is null))
             {
-                this.pantryStockListView.TopItem = foundItem;
+                this.pantryStockListView.Items.RemoveAt(topItemPantryIndex);
+                this.pantryStockListView.Items.Insert(0, foundItem);
+                Product topProduct = this.pantryList.getProductByIndex(topItemPantryIndex);
+                this.pantryList.removeByIndex(topItemPantryIndex);
+                this.pantryList.addToPantry(topProduct);
             }
 
             this.pantryStockListView.Update();
@@ -63,57 +67,72 @@ namespace WinForm___SmartPantry
 
         private void alphaCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.typeCheckBox.Checked = false;
-            this.locationCheckBox.Checked = false;
-            this.expirationCheckBox.Checked = false;
-            this.stockCheckBox.Checked = false;
-            this.pantryList.setSortType("Alphabetical");
-            this.pantryStockListView.Items.Clear();
-            this.buildListView();
+            if (this.alphaCheckBox.Checked == true)
+            {
+                this.typeCheckBox.Checked = false;
+                this.locationCheckBox.Checked = false;
+                this.expirationCheckBox.Checked = false;
+                this.stockCheckBox.Checked = false;
+                this.pantryList.setSortType("Alphabetical");
+                this.pantryStockListView.Items.Clear();
+                this.buildListView();
+            }
         }
 
         private void typeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.alphaCheckBox.Checked = false;
-            this.locationCheckBox.Checked = false;
-            this.expirationCheckBox.Checked = false;
-            this.stockCheckBox.Checked = false;
-            this.pantryList.setSortType("Type");
-            this.pantryStockListView.Items.Clear();
-            this.buildListView();
+            if (this.typeCheckBox.Checked == true)
+            {
+                this.alphaCheckBox.Checked = false;
+                this.locationCheckBox.Checked = false;
+                this.expirationCheckBox.Checked = false;
+                this.stockCheckBox.Checked = false;
+                this.pantryList.setSortType("Type");
+                this.pantryStockListView.Items.Clear();
+                this.buildListView();
+            }
         }
 
         private void locationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.alphaCheckBox.Checked = false;
-            this.typeCheckBox.Checked = false;
-            this.expirationCheckBox.Checked = false;
-            this.stockCheckBox.Checked = false;
-            this.pantryList.setSortType("Location");
-            this.pantryStockListView.Items.Clear();
-            this.buildListView();
+            if (this.locationCheckBox.Checked == true)
+            {
+                this.alphaCheckBox.Checked = false;
+                this.typeCheckBox.Checked = false;
+                this.expirationCheckBox.Checked = false;
+                this.stockCheckBox.Checked = false;
+                this.pantryList.setSortType("Location");
+                this.pantryStockListView.Items.Clear();
+                this.buildListView();
+            }
         }
 
         private void expirationCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.alphaCheckBox.Checked = false;
-            this.typeCheckBox.Checked = false;
-            this.locationCheckBox.Checked = false;
-            this.stockCheckBox.Checked = false;
-            this.pantryList.setSortType("Expiration");
-            this.pantryStockListView.Items.Clear();
-            this.buildListView();
+            if (this.expirationCheckBox.Checked == true)
+            {
+                this.alphaCheckBox.Checked = false;
+                this.typeCheckBox.Checked = false;
+                this.locationCheckBox.Checked = false;
+                this.stockCheckBox.Checked = false;
+                this.pantryList.setSortType("Expiration");
+                this.pantryStockListView.Items.Clear();
+                this.buildListView();
+            }
         }
 
         private void stockCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            this.alphaCheckBox.Checked = false;
-            this.typeCheckBox.Checked = false;
-            this.locationCheckBox.Checked = false;
-            this.expirationCheckBox.Checked = false;
-            this.pantryList.setSortType("Stock");
-            this.pantryStockListView.Items.Clear();
-            this.buildListView();
+            if (this.stockCheckBox.Checked == true)
+            {
+                this.alphaCheckBox.Checked = false;
+                this.typeCheckBox.Checked = false;
+                this.locationCheckBox.Checked = false;
+                this.expirationCheckBox.Checked = false;
+                this.pantryList.setSortType("Stock");
+                this.pantryStockListView.Items.Clear();
+                this.buildListView();
+            }
         }
     }
 }
