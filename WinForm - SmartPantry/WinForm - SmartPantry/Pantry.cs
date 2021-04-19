@@ -83,6 +83,18 @@ namespace WinForm___SmartPantry
             return this.pantryList.Count;
         }
 
+        // Method for setting the sort type and re-sorting.
+        public void setSortType(string input)
+        {
+            this.sortType = input;
+            this.pantryList = SortList(this.pantryList);
+        }
+
+        public void setAscending(bool state)
+        {
+            this.ascending = state;
+        }
+
         // Method that sorts based on current sort type
         public List<Product> SortList(List<Product> pantryList)
         {
@@ -147,6 +159,8 @@ namespace WinForm___SmartPantry
                         if (pantryList[i].Name.CompareTo(newList[j].Name) <= 0)
                         {
                             newList.Insert(j, pantryList[i]);
+                            j = currentCount;
+
                         }
 
                         // otherwise pantry lists name comes after
@@ -219,6 +233,7 @@ namespace WinForm___SmartPantry
                         if (typeList[i].Type.CompareTo(newList[j].Type) <= 0)
                         {
                             newList.Insert(j, typeList[i]);
+                            j = currentCount;
                         }
 
                         // otherwise pantry lists type comes after
@@ -300,6 +315,7 @@ namespace WinForm___SmartPantry
                         if (locationList[i].Location.CompareTo(newList[j].Location) <= 0)
                         {
                             newList.Insert(j, locationList[i]);
+                            j = currentCount;
                         }
 
                         // otherwise pantry lists location comes after
@@ -381,6 +397,7 @@ namespace WinForm___SmartPantry
                         if (expirationList[i].getOldestDate().CompareTo(newList[j].getOldestDate()) <= 0)
                         {
                             newList.Insert(j, expirationList[i]);
+                            j = currentCount;
                         }
 
                         // otherwise pantry lists expiration comes after
@@ -444,6 +461,7 @@ namespace WinForm___SmartPantry
                         if (pantryList[i].Stock.CompareTo(newList[j].Stock) <= 0)
                         {
                             newList.Insert(j, pantryList[i]);
+                            j = currentCount;
                         }
 
                         // otherwise pantry lists stock is more

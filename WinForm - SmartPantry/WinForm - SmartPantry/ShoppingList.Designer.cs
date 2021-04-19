@@ -51,11 +51,11 @@ namespace WinForm___SmartPantry
             this.typeLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.shoppingListView = new System.Windows.Forms.ListView();
+            this.checkboxColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.typeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.costColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.checkboxColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.actionButtonsGroupBox.SuspendLayout();
             this.shoppingListGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -307,6 +307,7 @@ namespace WinForm___SmartPantry
             this.typeColumnHeader,
             this.stockColumnHeader,
             this.costColumnHeader});
+            this.shoppingListView.GridLines = true;
             this.shoppingListView.HideSelection = false;
             this.shoppingListView.Location = new System.Drawing.Point(32, 17);
             this.shoppingListView.Name = "shoppingListView";
@@ -314,6 +315,11 @@ namespace WinForm___SmartPantry
             this.shoppingListView.TabIndex = 0;
             this.shoppingListView.UseCompatibleStateImageBehavior = false;
             this.shoppingListView.View = System.Windows.Forms.View.Details;
+            // 
+            // checkboxColumnHeader
+            // 
+            this.checkboxColumnHeader.Text = "";
+            this.checkboxColumnHeader.Width = 20;
             // 
             // nameColumnHeader
             // 
@@ -338,11 +344,6 @@ namespace WinForm___SmartPantry
             this.costColumnHeader.Text = "Cost";
             this.costColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.costColumnHeader.Width = 47;
-            // 
-            // checkboxColumnHeader
-            // 
-            this.checkboxColumnHeader.Text = "";
-            this.checkboxColumnHeader.Width = 20;
             // 
             // ShoppingList
             // 

@@ -47,6 +47,7 @@
             this.viewPantryButton.TabIndex = 0;
             this.viewPantryButton.Text = "View Pantry Stock";
             this.viewPantryButton.UseVisualStyleBackColor = true;
+            this.viewPantryButton.Click += new System.EventHandler(this.viewPantryButton_Click);
             // 
             // productManagementButton
             // 
