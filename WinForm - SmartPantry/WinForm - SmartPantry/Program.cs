@@ -14,6 +14,7 @@ namespace WinForm___SmartPantry
         [STAThread]
         static void Main()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDMzMTIxQDMxMzkyZTMxMmUzME9jbmFaL3lKK1RsMEVpcDI4em9LY3JzRTZsVDdlQlk2akVmU24zUWIzUlE9");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new HomePage());

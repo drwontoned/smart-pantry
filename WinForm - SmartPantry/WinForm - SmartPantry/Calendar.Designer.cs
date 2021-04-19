@@ -30,6 +30,7 @@ namespace WinForm___SmartPantry
         private void InitializeComponent()
         {
             this.homeButton = new System.Windows.Forms.Button();
+            this.sfCalendar1 = new Syncfusion.WinForms.Input.SfCalendar();
             this.SuspendLayout();
             // 
             // homeButton
@@ -44,11 +45,21 @@ namespace WinForm___SmartPantry
             this.homeButton.UseVisualStyleBackColor = false;
             this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
+            // sfCalendar1
+            // 
+            this.sfCalendar1.Location = new System.Drawing.Point(105, 12);
+            this.sfCalendar1.MinimumSize = new System.Drawing.Size(196, 196);
+            this.sfCalendar1.Name = "sfCalendar1";
+            this.sfCalendar1.Size = new System.Drawing.Size(469, 344);
+            this.sfCalendar1.TabIndex = 3;
+            this.sfCalendar1.Text = "sfCalendar1";
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 368);
+            this.Controls.Add(this.sfCalendar1);
             this.Controls.Add(this.homeButton);
             this.Name = "Calendar";
             this.Text = "Calendar";
@@ -59,5 +70,6 @@ namespace WinForm___SmartPantry
         #endregion
 
         private System.Windows.Forms.Button homeButton;
+        private Syncfusion.WinForms.Input.SfCalendar sfCalendar1;
     }
 }
