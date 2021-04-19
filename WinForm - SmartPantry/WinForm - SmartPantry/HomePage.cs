@@ -73,5 +73,16 @@ namespace WinForm___SmartPantry
             frm.Show();
             this.Hide();
         }
+
+        // Event method for pressing the "View Pantry Stock" button.
+        private void viewPantryButton_Click(object sender, EventArgs e)
+        {
+            var frm = new PantryStock(this);
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
     }
 }
