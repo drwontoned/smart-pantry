@@ -188,11 +188,17 @@ namespace WinForm___SmartPantry
                     int updatedStock = currentStock - newStock;
 
                     // if the user input to remove more stock than available set the stock to 0
-                    if (updatedStock < 0)
+                    if (updatedStock <= 0)
                     {
                         updatedStock = 0;
+                        this.expirationDates[i].updateAmount(updatedStock);
+                        expirationDates.RemoveAt(i);
                     }
-                    this.expirationDates[i].updateAmount(updatedStock);
+                    else
+                    {
+                        this.expirationDates[i].updateAmount(updatedStock);
+                    }
+
 
                     // also update overall stock
                     this.removeStock(newStock);
