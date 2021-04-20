@@ -144,28 +144,48 @@ namespace WinForm___SmartPantry
 
         private void removeButton_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Select Item To Remove");
+            this.stockToRemove.Enabled = true;
+            this.nameLabel2.Enabled = true;
+            this.nameTextBox.Enabled = true;
+            this.expirationTextBox.Enabled = true;
+            this.removeStockTextBox.Enabled = true;
+            this.RemoveStockButton.Enabled = true;
+            this.expirationDate.Enabled = true;
+            this.CancelButton.Enabled = true;
+            this.RemoveStockButton.Enabled = true;
+        }
+
+
+        private void pantryStockListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
             this.newProduct.Visible = false;
             this.pantryStockListView.Visible = false;
             this.searchTextBox.Visible = false;
             this.stockToRemove.Visible = true;
             this.nameLabel2.Visible = true;
             this.nameTextBox.Visible = true;
-            this.typelabel2.Visible= true;
-            this.typeTextBox.Visible = true;
-            this.locationTextBox.Visible = true;
             this.expirationTextBox.Visible = true;
             this.removeStockTextBox.Visible = true;
             this.RemoveStockButton.Visible = true;
-            this.locationLabel2.Visible = true;
             this.expirationDate.Visible = true;
             this.CancelButton.Visible = true;
             this.RemoveStockButton.Visible = true;
-        }
-
-
-        private void pantryStockListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+            //this.expirationTextBox.Text = this.pantryStockListView.SelectedItems[0].ToString();
+           // ListViewItem listViewItem = this.pantryStockListView.SelectedItems[0];
+          //  this.nameTextBox.Text = listViewItem.SubItems[1].Text;
+          
+            for (int i = 0; i < this.pantryList.getPantrySize(); i++)
+            {
+                var product = this.pantryList.getProductByIndex(i);
+                var lvi = new ListViewItem(new[] { "", product.Name, product.Type, product.Location, product.ExpirationDates.ToString() });
+                if (this.pantryStockListView.Items[i].Selected)
+                {
+                    this.nameTextBox.Text = product.Name;
+                }
+                
+             //   this.pantryStockListView.Items.Remove(lvi);
+            }
         }
 
         private void newProduct_Click(object sender, EventArgs e)
@@ -188,22 +208,39 @@ namespace WinForm___SmartPantry
             this.stockToRemove.Visible = false;
             this.nameLabel2.Visible = false;
             this.nameTextBox.Visible = false;
-            this.typelabel2.Visible = false;
-            this.typeTextBox.Visible = false;
-            this.locationTextBox.Visible = false;
             this.expirationTextBox.Visible = false;
             this.removeStockTextBox.Visible = false;
             this.RemoveStockButton.Visible = false;
-            this.locationLabel2.Visible = false;
             this.expirationDate.Visible = false;
             this.CancelButton.Visible = false;
             this.RemoveStockButton.Visible = false;
+            this.searchTextBox.Text = string.Empty;
+            this.nameTextBox.Text = string.Empty;
+            this.removeStockTextBox.Text = string.Empty;
+            this.expirationTextBox.Text = string.Empty;
         }
 
         private void RemoveStockButton_Click(object sender, EventArgs e)
         {
-           
-
+            for (int i = 0; i < this.pantryList.getPantrySize(); i++)
+            {
+                if (this.pantryStockListView.Items[i].Selected)
+                {
+                    this.pantryStockListView.SelectedItems[i].Remove();
+                }
+            }
+            this.newProduct.Visible = true;
+            this.pantryStockListView.Visible = true;
+            this.searchTextBox.Visible = true;
+            this.stockToRemove.Visible = false;
+            this.nameLabel2.Visible = false;
+            this.nameTextBox.Visible = false;
+            this.expirationTextBox.Visible = false;
+            this.removeStockTextBox.Visible = false;
+            this.RemoveStockButton.Visible = false;
+            this.expirationDate.Visible = false;
+            this.CancelButton.Visible = false;
+            this.RemoveStockButton.Visible = false;
         }
     }
 }

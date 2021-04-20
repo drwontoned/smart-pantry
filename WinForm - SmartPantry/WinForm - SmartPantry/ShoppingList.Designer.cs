@@ -63,9 +63,10 @@ namespace WinForm___SmartPantry
             // homeButton
             // 
             this.homeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.homeButton.Location = new System.Drawing.Point(12, 12);
+            this.homeButton.Location = new System.Drawing.Point(6, 6);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(188, 86);
+            this.homeButton.Size = new System.Drawing.Size(94, 45);
             this.homeButton.TabIndex = 1;
             this.homeButton.Text = "Return Home";
             this.homeButton.UseVisualStyleBackColor = false;
@@ -77,18 +78,21 @@ namespace WinForm___SmartPantry
             this.actionButtonsGroupBox.Controls.Add(this.exportButton);
             this.actionButtonsGroupBox.Controls.Add(this.removeButton);
             this.actionButtonsGroupBox.Controls.Add(this.addButton);
-            this.actionButtonsGroupBox.Location = new System.Drawing.Point(12, 104);
+            this.actionButtonsGroupBox.Location = new System.Drawing.Point(6, 54);
+            this.actionButtonsGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.actionButtonsGroupBox.Name = "actionButtonsGroupBox";
-            this.actionButtonsGroupBox.Size = new System.Drawing.Size(188, 592);
+            this.actionButtonsGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.actionButtonsGroupBox.Size = new System.Drawing.Size(94, 308);
             this.actionButtonsGroupBox.TabIndex = 2;
             this.actionButtonsGroupBox.TabStop = false;
             // 
             // exportButton
             // 
             this.exportButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exportButton.Location = new System.Drawing.Point(6, 250);
+            this.exportButton.Location = new System.Drawing.Point(3, 130);
+            this.exportButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exportButton.Name = "exportButton";
-            this.exportButton.Size = new System.Drawing.Size(176, 93);
+            this.exportButton.Size = new System.Drawing.Size(88, 48);
             this.exportButton.TabIndex = 3;
             this.exportButton.Text = "Export";
             this.exportButton.UseVisualStyleBackColor = false;
@@ -97,9 +101,10 @@ namespace WinForm___SmartPantry
             // removeButton
             // 
             this.removeButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.removeButton.Location = new System.Drawing.Point(6, 141);
+            this.removeButton.Location = new System.Drawing.Point(3, 73);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(176, 93);
+            this.removeButton.Size = new System.Drawing.Size(88, 48);
             this.removeButton.TabIndex = 1;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = false;
@@ -108,9 +113,10 @@ namespace WinForm___SmartPantry
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addButton.Location = new System.Drawing.Point(6, 30);
+            this.addButton.Location = new System.Drawing.Point(3, 16);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(176, 93);
+            this.addButton.Size = new System.Drawing.Size(88, 48);
             this.addButton.TabIndex = 0;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
@@ -120,10 +126,10 @@ namespace WinForm___SmartPantry
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(404, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(202, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(565, 61);
+            this.label1.Size = new System.Drawing.Size(290, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Person\'s Shopping List";
             // 
@@ -145,18 +151,21 @@ namespace WinForm___SmartPantry
             this.shoppingListGroupBox.Controls.Add(this.typeLabel);
             this.shoppingListGroupBox.Controls.Add(this.nameLabel);
             this.shoppingListGroupBox.Controls.Add(this.shoppingListView);
-            this.shoppingListGroupBox.Location = new System.Drawing.Point(219, 104);
+            this.shoppingListGroupBox.Location = new System.Drawing.Point(110, 54);
+            this.shoppingListGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shoppingListGroupBox.Name = "shoppingListGroupBox";
-            this.shoppingListGroupBox.Size = new System.Drawing.Size(942, 592);
+            this.shoppingListGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shoppingListGroupBox.Size = new System.Drawing.Size(471, 308);
             this.shoppingListGroupBox.TabIndex = 7;
             this.shoppingListGroupBox.TabStop = false;
             // 
             // removeCancelButton
             // 
             this.removeCancelButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.removeCancelButton.Location = new System.Drawing.Point(527, 510);
+            this.removeCancelButton.Location = new System.Drawing.Point(264, 265);
+            this.removeCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removeCancelButton.Name = "removeCancelButton";
-            this.removeCancelButton.Size = new System.Drawing.Size(139, 49);
+            this.removeCancelButton.Size = new System.Drawing.Size(70, 25);
             this.removeCancelButton.TabIndex = 21;
             this.removeCancelButton.Text = "Cancel";
             this.removeCancelButton.UseVisualStyleBackColor = false;
@@ -166,9 +175,10 @@ namespace WinForm___SmartPantry
             // removeFromListButton
             // 
             this.removeFromListButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.removeFromListButton.Location = new System.Drawing.Point(273, 510);
+            this.removeFromListButton.Location = new System.Drawing.Point(136, 265);
+            this.removeFromListButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.removeFromListButton.Name = "removeFromListButton";
-            this.removeFromListButton.Size = new System.Drawing.Size(139, 49);
+            this.removeFromListButton.Size = new System.Drawing.Size(70, 25);
             this.removeFromListButton.TabIndex = 20;
             this.removeFromListButton.Text = "Remove";
             this.removeFromListButton.UseVisualStyleBackColor = false;
@@ -178,9 +188,10 @@ namespace WinForm___SmartPantry
             // stockToAddRequiredLabel
             // 
             this.stockToAddRequiredLabel.AutoSize = true;
-            this.stockToAddRequiredLabel.Location = new System.Drawing.Point(432, 186);
+            this.stockToAddRequiredLabel.Location = new System.Drawing.Point(216, 97);
+            this.stockToAddRequiredLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stockToAddRequiredLabel.Name = "stockToAddRequiredLabel";
-            this.stockToAddRequiredLabel.Size = new System.Drawing.Size(99, 25);
+            this.stockToAddRequiredLabel.Size = new System.Drawing.Size(50, 13);
             this.stockToAddRequiredLabel.TabIndex = 19;
             this.stockToAddRequiredLabel.Text = "Required";
             this.stockToAddRequiredLabel.Visible = false;
@@ -188,9 +199,10 @@ namespace WinForm___SmartPantry
             // nameRequiredLabel
             // 
             this.nameRequiredLabel.AutoSize = true;
-            this.nameRequiredLabel.Location = new System.Drawing.Point(432, 55);
+            this.nameRequiredLabel.Location = new System.Drawing.Point(216, 29);
+            this.nameRequiredLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameRequiredLabel.Name = "nameRequiredLabel";
-            this.nameRequiredLabel.Size = new System.Drawing.Size(99, 25);
+            this.nameRequiredLabel.Size = new System.Drawing.Size(50, 13);
             this.nameRequiredLabel.TabIndex = 18;
             this.nameRequiredLabel.Text = "Required";
             this.nameRequiredLabel.Visible = false;
@@ -198,9 +210,10 @@ namespace WinForm___SmartPantry
             // addCancelButton
             // 
             this.addCancelButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addCancelButton.Location = new System.Drawing.Point(527, 510);
+            this.addCancelButton.Location = new System.Drawing.Point(264, 265);
+            this.addCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addCancelButton.Name = "addCancelButton";
-            this.addCancelButton.Size = new System.Drawing.Size(139, 49);
+            this.addCancelButton.Size = new System.Drawing.Size(70, 25);
             this.addCancelButton.TabIndex = 17;
             this.addCancelButton.Text = "Cancel";
             this.addCancelButton.UseVisualStyleBackColor = false;
@@ -210,9 +223,10 @@ namespace WinForm___SmartPantry
             // addToListButton
             // 
             this.addToListButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addToListButton.Location = new System.Drawing.Point(273, 510);
+            this.addToListButton.Location = new System.Drawing.Point(136, 265);
+            this.addToListButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addToListButton.Name = "addToListButton";
-            this.addToListButton.Size = new System.Drawing.Size(139, 49);
+            this.addToListButton.Size = new System.Drawing.Size(70, 25);
             this.addToListButton.TabIndex = 16;
             this.addToListButton.Text = "Add to List";
             this.addToListButton.UseVisualStyleBackColor = false;
@@ -222,36 +236,40 @@ namespace WinForm___SmartPantry
             // costTextBox
             // 
             this.costTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costTextBox.Location = new System.Drawing.Point(537, 234);
+            this.costTextBox.Location = new System.Drawing.Point(268, 122);
+            this.costTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.costTextBox.Name = "costTextBox";
-            this.costTextBox.Size = new System.Drawing.Size(383, 44);
+            this.costTextBox.Size = new System.Drawing.Size(194, 26);
             this.costTextBox.TabIndex = 15;
             this.costTextBox.Visible = false;
             // 
             // stockToAddTextBox
             // 
             this.stockToAddTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockToAddTextBox.Location = new System.Drawing.Point(537, 174);
+            this.stockToAddTextBox.Location = new System.Drawing.Point(268, 90);
+            this.stockToAddTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stockToAddTextBox.Name = "stockToAddTextBox";
-            this.stockToAddTextBox.Size = new System.Drawing.Size(383, 44);
+            this.stockToAddTextBox.Size = new System.Drawing.Size(194, 26);
             this.stockToAddTextBox.TabIndex = 14;
             this.stockToAddTextBox.Visible = false;
             // 
             // typeTextBox
             // 
             this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeTextBox.Location = new System.Drawing.Point(537, 111);
+            this.typeTextBox.Location = new System.Drawing.Point(268, 58);
+            this.typeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(383, 44);
+            this.typeTextBox.Size = new System.Drawing.Size(194, 26);
             this.typeTextBox.TabIndex = 13;
             this.typeTextBox.Visible = false;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(537, 48);
+            this.nameTextBox.Location = new System.Drawing.Point(268, 25);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(383, 44);
+            this.nameTextBox.Size = new System.Drawing.Size(194, 26);
             this.nameTextBox.TabIndex = 12;
             this.nameTextBox.Visible = false;
             // 
@@ -259,9 +277,10 @@ namespace WinForm___SmartPantry
             // 
             this.costLabel.AutoSize = true;
             this.costLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.costLabel.Location = new System.Drawing.Point(25, 241);
+            this.costLabel.Location = new System.Drawing.Point(12, 125);
+            this.costLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.costLabel.Name = "costLabel";
-            this.costLabel.Size = new System.Drawing.Size(92, 37);
+            this.costLabel.Size = new System.Drawing.Size(46, 20);
             this.costLabel.TabIndex = 11;
             this.costLabel.Text = "Cost:";
             this.costLabel.Visible = false;
@@ -270,9 +289,10 @@ namespace WinForm___SmartPantry
             // 
             this.stockToAddLabel.AutoSize = true;
             this.stockToAddLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockToAddLabel.Location = new System.Drawing.Point(25, 181);
+            this.stockToAddLabel.Location = new System.Drawing.Point(12, 94);
+            this.stockToAddLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stockToAddLabel.Name = "stockToAddLabel";
-            this.stockToAddLabel.Size = new System.Drawing.Size(209, 37);
+            this.stockToAddLabel.Size = new System.Drawing.Size(105, 20);
             this.stockToAddLabel.TabIndex = 10;
             this.stockToAddLabel.Text = "Stock to Add:";
             this.stockToAddLabel.Visible = false;
@@ -281,9 +301,10 @@ namespace WinForm___SmartPantry
             // 
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(25, 118);
+            this.typeLabel.Location = new System.Drawing.Point(12, 61);
+            this.typeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(96, 37);
+            this.typeLabel.Size = new System.Drawing.Size(47, 20);
             this.typeLabel.TabIndex = 9;
             this.typeLabel.Text = "Type:";
             this.typeLabel.Visible = false;
@@ -292,9 +313,10 @@ namespace WinForm___SmartPantry
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(25, 55);
+            this.nameLabel.Location = new System.Drawing.Point(12, 29);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(112, 37);
+            this.nameLabel.Size = new System.Drawing.Size(55, 20);
             this.nameLabel.TabIndex = 8;
             this.nameLabel.Text = "Name:";
             this.nameLabel.Visible = false;
@@ -309,9 +331,10 @@ namespace WinForm___SmartPantry
             this.costColumnHeader});
             this.shoppingListView.GridLines = true;
             this.shoppingListView.HideSelection = false;
-            this.shoppingListView.Location = new System.Drawing.Point(32, 17);
+            this.shoppingListView.Location = new System.Drawing.Point(16, 9);
+            this.shoppingListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.shoppingListView.Name = "shoppingListView";
-            this.shoppingListView.Size = new System.Drawing.Size(898, 487);
+            this.shoppingListView.Size = new System.Drawing.Size(451, 255);
             this.shoppingListView.TabIndex = 0;
             this.shoppingListView.UseCompatibleStateImageBehavior = false;
             this.shoppingListView.View = System.Windows.Forms.View.Details;
@@ -347,13 +370,14 @@ namespace WinForm___SmartPantry
             // 
             // ShoppingList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 708);
+            this.ClientSize = new System.Drawing.Size(586, 368);
             this.Controls.Add(this.shoppingListGroupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.actionButtonsGroupBox);
             this.Controls.Add(this.homeButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ShoppingList";
             this.Text = "Smart Pantry";
             this.actionButtonsGroupBox.ResumeLayout(false);
