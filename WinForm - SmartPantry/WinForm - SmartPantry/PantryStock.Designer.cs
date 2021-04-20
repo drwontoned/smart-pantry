@@ -51,10 +51,21 @@ namespace WinForm___SmartPantry
             this.locationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pantryStockGroupBox = new System.Windows.Forms.GroupBox();
+            this.expirationTextBox = new System.Windows.Forms.TextBox();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.removeStockTextBox = new System.Windows.Forms.TextBox();
+            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.RemoveStockButton = new System.Windows.Forms.Button();
+            this.expirationDate = new System.Windows.Forms.Label();
+            this.stockToRemove = new System.Windows.Forms.Label();
+            this.locationLabel2 = new System.Windows.Forms.Label();
+            this.typelabel2 = new System.Windows.Forms.Label();
+            this.nameLabel2 = new System.Windows.Forms.Label();
             this.newProduct = new System.Windows.Forms.Button();
             this.searchForProductLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.removeProduct = new System.Windows.Forms.Button();
             this.actionsGroupBox.SuspendLayout();
             this.sortOptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -276,7 +287,18 @@ namespace WinForm___SmartPantry
             // pantryStockGroupBox
             // 
             this.pantryStockGroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pantryStockGroupBox.Controls.Add(this.removeProduct);
+            this.pantryStockGroupBox.Controls.Add(this.expirationTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.locationTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.removeStockTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.typeTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.nameTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.CancelButton);
+            this.pantryStockGroupBox.Controls.Add(this.RemoveStockButton);
+            this.pantryStockGroupBox.Controls.Add(this.expirationDate);
+            this.pantryStockGroupBox.Controls.Add(this.stockToRemove);
+            this.pantryStockGroupBox.Controls.Add(this.locationLabel2);
+            this.pantryStockGroupBox.Controls.Add(this.typelabel2);
+            this.pantryStockGroupBox.Controls.Add(this.nameLabel2);
             this.pantryStockGroupBox.Controls.Add(this.newProduct);
             this.pantryStockGroupBox.Controls.Add(this.pantryStockListView);
             this.pantryStockGroupBox.Controls.Add(this.searchForProductLabel);
@@ -288,6 +310,138 @@ namespace WinForm___SmartPantry
             this.pantryStockGroupBox.Size = new System.Drawing.Size(473, 321);
             this.pantryStockGroupBox.TabIndex = 17;
             this.pantryStockGroupBox.TabStop = false;
+            // 
+            // expirationTextBox
+            // 
+            this.expirationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationTextBox.Location = new System.Drawing.Point(267, 241);
+            this.expirationTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.expirationTextBox.Name = "expirationTextBox";
+            this.expirationTextBox.Size = new System.Drawing.Size(194, 26);
+            this.expirationTextBox.TabIndex = 18;
+            this.expirationTextBox.Visible = false;
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationTextBox.Location = new System.Drawing.Point(267, 196);
+            this.locationTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(194, 26);
+            this.locationTextBox.TabIndex = 18;
+            this.locationTextBox.Visible = false;
+            // 
+            // removeStockTextBox
+            // 
+            this.removeStockTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeStockTextBox.Location = new System.Drawing.Point(267, 156);
+            this.removeStockTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.removeStockTextBox.Name = "removeStockTextBox";
+            this.removeStockTextBox.Size = new System.Drawing.Size(194, 26);
+            this.removeStockTextBox.TabIndex = 18;
+            this.removeStockTextBox.Visible = false;
+            // 
+            // typeTextBox
+            // 
+            this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeTextBox.Location = new System.Drawing.Point(267, 49);
+            this.typeTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.typeTextBox.Name = "typeTextBox";
+            this.typeTextBox.Size = new System.Drawing.Size(194, 26);
+            this.typeTextBox.TabIndex = 18;
+            this.typeTextBox.Visible = false;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextBox.Location = new System.Drawing.Point(268, 11);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(194, 26);
+            this.nameTextBox.TabIndex = 18;
+            this.nameTextBox.Visible = false;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Location = new System.Drawing.Point(278, 277);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(75, 37);
+            this.CancelButton.TabIndex = 19;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Visible = false;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // RemoveStockButton
+            // 
+            this.RemoveStockButton.Location = new System.Drawing.Point(136, 277);
+            this.RemoveStockButton.Name = "RemoveStockButton";
+            this.RemoveStockButton.Size = new System.Drawing.Size(75, 37);
+            this.RemoveStockButton.TabIndex = 18;
+            this.RemoveStockButton.Text = "Remove Stock";
+            this.RemoveStockButton.UseVisualStyleBackColor = true;
+            this.RemoveStockButton.Visible = false;
+            this.RemoveStockButton.Click += new System.EventHandler(this.RemoveStockButton_Click);
+            // 
+            // expirationDate
+            // 
+            this.expirationDate.AutoSize = true;
+            this.expirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDate.Location = new System.Drawing.Point(12, 244);
+            this.expirationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.expirationDate.Name = "expirationDate";
+            this.expirationDate.Size = new System.Drawing.Size(122, 20);
+            this.expirationDate.TabIndex = 18;
+            this.expirationDate.Text = "Expiration Date:";
+            this.expirationDate.Visible = false;
+            // 
+            // stockToRemove
+            // 
+            this.stockToRemove.AutoSize = true;
+            this.stockToRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stockToRemove.Location = new System.Drawing.Point(13, 159);
+            this.stockToRemove.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stockToRemove.Name = "stockToRemove";
+            this.stockToRemove.Size = new System.Drawing.Size(139, 20);
+            this.stockToRemove.TabIndex = 18;
+            this.stockToRemove.Text = "Stock To Remove:";
+            this.stockToRemove.Visible = false;
+            // 
+            // locationLabel2
+            // 
+            this.locationLabel2.AutoSize = true;
+            this.locationLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationLabel2.Location = new System.Drawing.Point(12, 199);
+            this.locationLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.locationLabel2.Name = "locationLabel2";
+            this.locationLabel2.Size = new System.Drawing.Size(74, 20);
+            this.locationLabel2.TabIndex = 18;
+            this.locationLabel2.Text = "Location:";
+            this.locationLabel2.Visible = false;
+            // 
+            // typelabel2
+            // 
+            this.typelabel2.AutoSize = true;
+            this.typelabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typelabel2.Location = new System.Drawing.Point(13, 52);
+            this.typelabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.typelabel2.Name = "typelabel2";
+            this.typelabel2.Size = new System.Drawing.Size(47, 20);
+            this.typelabel2.TabIndex = 18;
+            this.typelabel2.Text = "Type:";
+            this.typelabel2.Visible = false;
+            // 
+            // nameLabel2
+            // 
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel2.Location = new System.Drawing.Point(13, 17);
+            this.nameLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(55, 20);
+            this.nameLabel2.TabIndex = 18;
+            this.nameLabel2.Text = "Name:";
+            this.nameLabel2.Visible = false;
             // 
             // newProduct
             // 
@@ -316,17 +470,6 @@ namespace WinForm___SmartPantry
             this.searchTextBox.Size = new System.Drawing.Size(446, 20);
             this.searchTextBox.TabIndex = 5;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
-            // 
-            // removeProduct
-            // 
-            this.removeProduct.Location = new System.Drawing.Point(17, 38);
-            this.removeProduct.Name = "removeProduct";
-            this.removeProduct.Size = new System.Drawing.Size(444, 29);
-            this.removeProduct.TabIndex = 9;
-            this.removeProduct.Text = "Remove Product";
-            this.removeProduct.UseVisualStyleBackColor = true;
-            this.removeProduct.Visible = false;
-            this.removeProduct.Click += new System.EventHandler(this.removeProduct_Click);
             // 
             // PantryStock
             // 
@@ -376,6 +519,17 @@ namespace WinForm___SmartPantry
         private System.Windows.Forms.Label searchForProductLabel;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button newProduct;
-        private System.Windows.Forms.Button removeProduct;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button RemoveStockButton;
+        private System.Windows.Forms.Label expirationDate;
+        private System.Windows.Forms.Label stockToRemove;
+        private System.Windows.Forms.Label locationLabel2;
+        private System.Windows.Forms.Label typelabel2;
+        private System.Windows.Forms.Label nameLabel2;
+        private System.Windows.Forms.TextBox expirationTextBox;
+        private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.TextBox removeStockTextBox;
+        private System.Windows.Forms.TextBox typeTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }
