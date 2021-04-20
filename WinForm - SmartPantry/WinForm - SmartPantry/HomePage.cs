@@ -156,6 +156,34 @@ namespace WinForm___SmartPantry
             }
         }
 
+        public HomePage(Pantry pantry)
+        {
+            InitializeComponent();
+            this.PersonsPantry = pantry;
+
+            DateTime today = new DateTime(2021, 4, 20);
+
+            // insert products into the list box
+            for (int i = 0; i < PersonsPantry.getPantrySize(); i++)
+            {
+                this.HomePagePantry.Items.Add(createHomePagePantryText(PersonsPantry.getProductByIndex(i)));
+                Product currentProduct = this.PersonsPantry.getProductByIndex(i);
+
+                if (currentProduct.ExpirationDates.Count > 0)
+                {
+                    for (int j = 0; j < currentProduct.ExpirationDates.Count; j++)
+                    {
+
+                        if ((currentProduct.ExpirationDates[j].ActualDate - today).TotalDays <= 7)
+                        {
+                            this.expirationsBox.Items.Add(createHomePageExpirationText(currentProduct, j, today));
+                        }
+                    }
+                }
+
+            }
+        }
+
         // method for generating string based on products 
         // for the home page pantry view
         public string createHomePagePantryText(Product p)
@@ -206,7 +234,7 @@ namespace WinForm___SmartPantry
 
         private void viewExpirationDatesButton_Click(object sender, EventArgs e)
         {
-            var frm = new PantryStock(this);//new Calendar(this.PersonsPantry);
+            var frm = new Calendar(this.PersonsPantry);
             frm.Location = this.Location;
             frm.StartPosition = FormStartPosition.Manual;
             frm.FormClosing += delegate { this.Show(); };

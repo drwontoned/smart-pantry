@@ -59,6 +59,7 @@
             this.viewExpirationDatesButton.TabIndex = 2;
             this.viewExpirationDatesButton.Text = "View Expiration Dates";
             this.viewExpirationDatesButton.UseVisualStyleBackColor = true;
+            this.viewExpirationDatesButton.Click += new System.EventHandler(this.viewExpirationDatesButton_Click);
             // 
             // viewShoppingListButton
             // 
