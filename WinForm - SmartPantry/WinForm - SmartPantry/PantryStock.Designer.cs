@@ -235,7 +235,7 @@ namespace WinForm___SmartPantry
             this.pantryStockListView.FullRowSelect = true;
             this.pantryStockListView.GridLines = true;
             this.pantryStockListView.HideSelection = false;
-            this.pantryStockListView.Location = new System.Drawing.Point(16, 74);
+            this.pantryStockListView.Location = new System.Drawing.Point(16, 75);
             this.pantryStockListView.MultiSelect = false;
             this.pantryStockListView.Name = "pantryStockListView";
             this.pantryStockListView.Size = new System.Drawing.Size(446, 240);
@@ -319,12 +319,14 @@ namespace WinForm___SmartPantry
             // 
             // removeProduct
             // 
-            this.removeProduct.Location = new System.Drawing.Point(17, 41);
+            this.removeProduct.Location = new System.Drawing.Point(17, 38);
             this.removeProduct.Name = "removeProduct";
-            this.removeProduct.Size = new System.Drawing.Size(444, 26);
+            this.removeProduct.Size = new System.Drawing.Size(444, 29);
             this.removeProduct.TabIndex = 9;
             this.removeProduct.Text = "Remove Product";
             this.removeProduct.UseVisualStyleBackColor = true;
+            this.removeProduct.Visible = false;
+            this.removeProduct.Click += new System.EventHandler(this.removeProduct_Click);
             // 
             // PantryStock
             // 

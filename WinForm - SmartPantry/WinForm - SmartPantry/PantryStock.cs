@@ -145,7 +145,7 @@ namespace WinForm___SmartPantry
         private void removeButton_Click(object sender, EventArgs e)
         {
             newProduct.Visible = false;
-            removeProduct.Visible = false;
+            removeProduct.Visible = true;
         }
 
 
@@ -157,12 +157,22 @@ namespace WinForm___SmartPantry
         private void newProduct_Click(object sender, EventArgs e)
         {
             // make sure the text is finished first before clicking add
-            // ListViewItem addItem = this.pantryStockListView.FindItemWithText(searchTextBox.Text, true, 0, true);
-            if (this.searchTextBox.Text.Length > 0)
+            // ListViewItem addItem = searchTextBox.Text.ToString();
+            if (this.searchTextBox.Text != "")
             {
-                this.pantryStockListView.Items.Add(searchTextBox.Text);
+                this.pantryStockListView.Items.Insert(0, searchTextBox.Text.ToString());
             }
             this.pantryStockListView.Update();
+        }
+
+        private void removeProduct_Click(object sender, EventArgs e)
+        {
+           // ListViewItem removeItem = this.pantryStockListView.SelectedItems.i
+            //this.pantryStockListView.Items.Remove();
+            if()
+            {
+
+            }
         }
     }
 }
