@@ -56,12 +56,20 @@ namespace WinForm___SmartPantry
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
             this.RemoveStockButton = new System.Windows.Forms.Button();
-            this.expirationDate = new System.Windows.Forms.Label();
+            this.expirationDateLabel = new System.Windows.Forms.Label();
             this.stockToRemove = new System.Windows.Forms.Label();
             this.nameLabel2 = new System.Windows.Forms.Label();
             this.newProduct = new System.Windows.Forms.Button();
             this.searchForProductLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel3 = new System.Windows.Forms.Label();
+            this.typeLabel3 = new System.Windows.Forms.Label();
+            this.StockToAddLabel = new System.Windows.Forms.Label();
+            this.addStockTextBox = new System.Windows.Forms.TextBox();
+            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.locationLabel = new System.Windows.Forms.Label();
+            this.locationTextBox = new System.Windows.Forms.TextBox();
+            this.addStockButton = new System.Windows.Forms.Button();
             this.actionsGroupBox.SuspendLayout();
             this.sortOptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -279,17 +287,24 @@ namespace WinForm___SmartPantry
             this.stockColumnHeader.Text = "Stock";
             this.stockColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.stockColumnHeader.Width = 40;
-
             // 
             // pantryStockGroupBox
             // 
             this.pantryStockGroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pantryStockGroupBox.Controls.Add(this.addStockButton);
+            this.pantryStockGroupBox.Controls.Add(this.locationTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.locationLabel);
+            this.pantryStockGroupBox.Controls.Add(this.typeTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.addStockTextBox);
+            this.pantryStockGroupBox.Controls.Add(this.StockToAddLabel);
+            this.pantryStockGroupBox.Controls.Add(this.typeLabel3);
+            this.pantryStockGroupBox.Controls.Add(this.nameLabel3);
             this.pantryStockGroupBox.Controls.Add(this.expirationTextBox);
             this.pantryStockGroupBox.Controls.Add(this.removeStockTextBox);
             this.pantryStockGroupBox.Controls.Add(this.nameTextBox);
             this.pantryStockGroupBox.Controls.Add(this.CancelButton);
             this.pantryStockGroupBox.Controls.Add(this.RemoveStockButton);
-            this.pantryStockGroupBox.Controls.Add(this.expirationDate);
+            this.pantryStockGroupBox.Controls.Add(this.expirationDateLabel);
             this.pantryStockGroupBox.Controls.Add(this.stockToRemove);
             this.pantryStockGroupBox.Controls.Add(this.nameLabel2);
             this.pantryStockGroupBox.Controls.Add(this.newProduct);
@@ -361,18 +376,18 @@ namespace WinForm___SmartPantry
             this.RemoveStockButton.Visible = false;
             this.RemoveStockButton.Click += new System.EventHandler(this.RemoveStockButton_Click);
             // 
-            // expirationDate
+            // expirationDateLabel
             // 
-            this.expirationDate.AutoSize = true;
-            this.expirationDate.Enabled = false;
-            this.expirationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expirationDate.Location = new System.Drawing.Point(12, 244);
-            this.expirationDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.expirationDate.Name = "expirationDate";
-            this.expirationDate.Size = new System.Drawing.Size(122, 20);
-            this.expirationDate.TabIndex = 18;
-            this.expirationDate.Text = "Expiration Date:";
-            this.expirationDate.Visible = false;
+            this.expirationDateLabel.AutoSize = true;
+            this.expirationDateLabel.Enabled = false;
+            this.expirationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDateLabel.Location = new System.Drawing.Point(12, 244);
+            this.expirationDateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.expirationDateLabel.Name = "expirationDateLabel";
+            this.expirationDateLabel.Size = new System.Drawing.Size(122, 20);
+            this.expirationDateLabel.TabIndex = 18;
+            this.expirationDateLabel.Text = "Expiration Date:";
+            this.expirationDateLabel.Visible = false;
             // 
             // stockToRemove
             // 
@@ -428,6 +443,103 @@ namespace WinForm___SmartPantry
             this.searchTextBox.TabIndex = 5;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
+            // nameLabel3
+            // 
+            this.nameLabel3.AutoSize = true;
+            this.nameLabel3.Enabled = false;
+            this.nameLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel3.Location = new System.Drawing.Point(13, 17);
+            this.nameLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLabel3.Name = "nameLabel3";
+            this.nameLabel3.Size = new System.Drawing.Size(55, 20);
+            this.nameLabel3.TabIndex = 19;
+            this.nameLabel3.Text = "Name:";
+            this.nameLabel3.Visible = false;
+            // 
+            // typeLabel3
+            // 
+            this.typeLabel3.AutoSize = true;
+            this.typeLabel3.Enabled = false;
+            this.typeLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel3.Location = new System.Drawing.Point(13, 59);
+            this.typeLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.typeLabel3.Name = "typeLabel3";
+            this.typeLabel3.Size = new System.Drawing.Size(47, 20);
+            this.typeLabel3.TabIndex = 19;
+            this.typeLabel3.Text = "Type:";
+            this.typeLabel3.Visible = false;
+            // 
+            // StockToAddLabel
+            // 
+            this.StockToAddLabel.AutoSize = true;
+            this.StockToAddLabel.Enabled = false;
+            this.StockToAddLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockToAddLabel.Location = new System.Drawing.Point(13, 199);
+            this.StockToAddLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.StockToAddLabel.Name = "StockToAddLabel";
+            this.StockToAddLabel.Size = new System.Drawing.Size(109, 20);
+            this.StockToAddLabel.TabIndex = 19;
+            this.StockToAddLabel.Text = "Stock To Add:";
+            this.StockToAddLabel.Visible = false;
+            // 
+            // addStockTextBox
+            // 
+            this.addStockTextBox.Enabled = false;
+            this.addStockTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStockTextBox.Location = new System.Drawing.Point(268, 196);
+            this.addStockTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.addStockTextBox.Name = "addStockTextBox";
+            this.addStockTextBox.Size = new System.Drawing.Size(194, 26);
+            this.addStockTextBox.TabIndex = 19;
+            this.addStockTextBox.Visible = false;
+            // 
+            // typeTextBox
+            // 
+            this.typeTextBox.Enabled = false;
+            this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeTextBox.Location = new System.Drawing.Point(267, 59);
+            this.typeTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.typeTextBox.Name = "typeTextBox";
+            this.typeTextBox.Size = new System.Drawing.Size(194, 26);
+            this.typeTextBox.TabIndex = 19;
+            this.typeTextBox.Visible = false;
+            // 
+            // locationLabel
+            // 
+            this.locationLabel.AutoSize = true;
+            this.locationLabel.Enabled = false;
+            this.locationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationLabel.Location = new System.Drawing.Point(13, 103);
+            this.locationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.locationLabel.Name = "locationLabel";
+            this.locationLabel.Size = new System.Drawing.Size(74, 20);
+            this.locationLabel.TabIndex = 20;
+            this.locationLabel.Text = "Location:";
+            this.locationLabel.Visible = false;
+            // 
+            // locationTextBox
+            // 
+            this.locationTextBox.Enabled = false;
+            this.locationTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationTextBox.Location = new System.Drawing.Point(267, 103);
+            this.locationTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.locationTextBox.Name = "locationTextBox";
+            this.locationTextBox.Size = new System.Drawing.Size(194, 26);
+            this.locationTextBox.TabIndex = 20;
+            this.locationTextBox.Visible = false;
+            // 
+            // addStockButton
+            // 
+            this.addStockButton.Enabled = false;
+            this.addStockButton.Location = new System.Drawing.Point(136, 277);
+            this.addStockButton.Name = "addStockButton";
+            this.addStockButton.Size = new System.Drawing.Size(75, 37);
+            this.addStockButton.TabIndex = 19;
+            this.addStockButton.Text = "Add Stock";
+            this.addStockButton.UseVisualStyleBackColor = true;
+            this.addStockButton.Visible = false;
+            this.addStockButton.Click += new System.EventHandler(this.addStockButton_Click);
+            // 
             // PantryStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,11 +590,19 @@ namespace WinForm___SmartPantry
         private System.Windows.Forms.Button newProduct;
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button RemoveStockButton;
-        private System.Windows.Forms.Label expirationDate;
+        private System.Windows.Forms.Label expirationDateLabel;
         private System.Windows.Forms.Label stockToRemove;
         private System.Windows.Forms.Label nameLabel2;
         private System.Windows.Forms.TextBox expirationTextBox;
         private System.Windows.Forms.TextBox removeStockTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label nameLabel3;
+        private System.Windows.Forms.Label typeLabel3;
+        private System.Windows.Forms.Label StockToAddLabel;
+        private System.Windows.Forms.TextBox addStockTextBox;
+        private System.Windows.Forms.TextBox typeTextBox;
+        private System.Windows.Forms.TextBox locationTextBox;
+        private System.Windows.Forms.Label locationLabel;
+        private System.Windows.Forms.Button addStockButton;
     }
 }

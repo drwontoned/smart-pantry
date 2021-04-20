@@ -138,8 +138,13 @@ namespace WinForm___SmartPantry
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            newProduct.Visible = true;
-            
+            this.newProduct.Visible = true;
+            this.nameTextBox.Enabled = true;
+            this.typeTextBox.Enabled = true;
+            this.locationTextBox.Enabled = true;
+            this.expirationTextBox.Enabled = true;
+            this.addStockTextBox.Enabled = true;
+            this.addStockButton.Enabled = true;
         }
 
         private void removeButton_Click(object sender, EventArgs e)
@@ -151,9 +156,10 @@ namespace WinForm___SmartPantry
             this.expirationTextBox.Enabled = true;
             this.removeStockTextBox.Enabled = true;
             this.RemoveStockButton.Enabled = true;
-            this.expirationDate.Enabled = true;
+            this.expirationDateLabel.Enabled = true;
             this.CancelButton.Enabled = true;
             this.RemoveStockButton.Enabled = true;
+            
         }
 
 
@@ -168,7 +174,7 @@ namespace WinForm___SmartPantry
             this.expirationTextBox.Visible = true;
             this.removeStockTextBox.Visible = true;
             this.RemoveStockButton.Visible = true;
-            this.expirationDate.Visible = true;
+            this.expirationDateLabel.Visible = true;
             this.CancelButton.Visible = true;
             this.RemoveStockButton.Visible = true;
             //this.expirationTextBox.Text = this.pantryStockListView.SelectedItems[0].ToString();
@@ -190,13 +196,22 @@ namespace WinForm___SmartPantry
 
         private void newProduct_Click(object sender, EventArgs e)
         {
-            // make sure the text is finished first before clicking add
-            // ListViewItem addItem = searchTextBox.Text.ToString();
-            if (this.searchTextBox.Text != "")
-            {
-                this.pantryStockListView.Items.Insert(0, searchTextBox.Text.ToString());
-            }
-            this.pantryStockListView.Update();
+            this.pantryStockListView.Visible = false;
+            this.searchTextBox.Visible = false;
+            this.newProduct.Visible = false;
+            this.CancelButton.Visible = true;
+            this.CancelButton.Enabled = true;
+            this.nameLabel3.Visible = true;
+            this.nameTextBox.Visible = true;
+            this.typeLabel3.Visible = true;
+            this.typeTextBox.Visible = true;
+            this.locationLabel.Visible = true;
+            this.locationTextBox.Visible = true;
+            this.StockToAddLabel.Visible = true;
+            this.addStockTextBox.Visible = true;
+            this.addStockButton.Visible = true;
+            this.expirationTextBox.Visible = true;
+            this.expirationDateLabel.Visible = true;
         }
           
 
@@ -211,13 +226,23 @@ namespace WinForm___SmartPantry
             this.expirationTextBox.Visible = false;
             this.removeStockTextBox.Visible = false;
             this.RemoveStockButton.Visible = false;
-            this.expirationDate.Visible = false;
+            this.expirationDateLabel.Visible = false;
             this.CancelButton.Visible = false;
             this.RemoveStockButton.Visible = false;
             this.searchTextBox.Text = string.Empty;
             this.nameTextBox.Text = string.Empty;
             this.removeStockTextBox.Text = string.Empty;
             this.expirationTextBox.Text = string.Empty;
+            this.nameLabel3.Visible = false;
+            this.nameTextBox.Visible = false;
+            this.typeLabel3.Visible = false;
+            this.typeTextBox.Visible = false;
+            this.locationLabel.Visible = false;
+            this.locationTextBox.Visible = false;
+            this.StockToAddLabel.Visible = false;
+            this.addStockTextBox.Visible = false;
+            this.addStockButton.Visible = false;
+            this.newProduct.Visible = false;
         }
 
         private void RemoveStockButton_Click(object sender, EventArgs e)
@@ -238,9 +263,37 @@ namespace WinForm___SmartPantry
             this.expirationTextBox.Visible = false;
             this.removeStockTextBox.Visible = false;
             this.RemoveStockButton.Visible = false;
-            this.expirationDate.Visible = false;
+            this.expirationDateLabel.Visible = false;
             this.CancelButton.Visible = false;
             this.RemoveStockButton.Visible = false;
+        }
+
+        private void addStockButton_Click(object sender, EventArgs e)
+        {
+            ListViewItem addItem = new ListViewItem(new[] { "", nameTextBox.Text, typeTextBox.Text, locationTextBox.Text, addStockTextBox.Text });
+            this.pantryStockListView.Items.Add(addItem);
+            this.nameLabel3.Visible = false;
+            this.nameTextBox.Visible = false;
+            this.typeLabel3.Visible = false;
+            this.typeTextBox.Visible = false;
+            this.locationLabel.Visible = false;
+            this.locationTextBox.Visible = false;
+            this.StockToAddLabel.Visible = false;
+            this.addStockTextBox.Visible = false;
+            this.addStockButton.Visible = false;
+            this.newProduct.Visible = false;
+            this.newProduct.Visible = true;
+            this.pantryStockListView.Visible = true;
+            this.searchTextBox.Visible = true;
+            this.nameTextBox.Text = string.Empty;
+            this.typeTextBox.Text = string.Empty;
+            this.locationTextBox.Text = string.Empty;
+            this.expirationTextBox.Text = string.Empty;
+            this.addStockTextBox.Text = string.Empty;
+            this.CancelButton.Visible = false;
+            this.expirationTextBox.Visible = false;
+            this.expirationDateLabel.Visible = false;
+            this.pantryStockListView.Update();
         }
     }
 }
