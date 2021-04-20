@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SmartPantryApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <ListBox x:Name="HomePagePantry" HorizontalAlignment="Left" Height="399" VerticalAlignment="Top" Width="365" Margin="10,10,0,0">
+
+    </ListBox>
 </Window>
