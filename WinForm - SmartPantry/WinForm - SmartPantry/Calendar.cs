@@ -26,15 +26,11 @@ namespace WinForm___SmartPantry
         {
             InitializeComponent();
             createSpecialDates();
-            richTextBox1.Text = "INIT";
+            //richTextBox1.Text = "INIT";
             //sfCalendar1.AllowMultipleSelection = true;
             this.home = home;
             sfCalendar1.ShowToolTip = true;
             removebutton.Enabled = false;
-
-
-
-
         }
 
         private void createSpecialDates()
@@ -64,8 +60,6 @@ namespace WinForm___SmartPantry
             specialDateInfo.Add(specialDate1Info);
             specialDateInfo.Add(specialDate2Info);
         }
-
-        //public List<SpecialDate> SpecialDates { get; set; }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
@@ -127,14 +121,6 @@ namespace WinForm___SmartPantry
 
                 if (SpecialDates.Count > 0)
                 {
-                    //if (SpecialDates[0].Value == currentDate)
-                    //{
-                    //    richTextBox1.Text = specialDateInfo[0];
-                    //}
-                    //else if (SpecialDates[1].Value == currentDate)
-                    //{
-                    //    richTextBox1.Text = specialDateInfo[1];
-                    //}
                     int count = 0;
                     foreach (SpecialDate dat in SpecialDates)
                     {
@@ -178,30 +164,5 @@ namespace WinForm___SmartPantry
             else
                 return;
         }
-
-        //private void SfCalendar_ToolTipOpening(SfCalendar sender, Syncfusion.WinForms.Input.Events.ToolTipOpeningEventArgs e)
-        //{
-
-        //    if (e.Value.Value.Date == new DateTime(2021, 04, 20))
-        //    {
-        //        e.ToolTipInfo.Items[0].Text = "Valentine's Day";
-        //    }
-        //    //if (e.ViewType == Syncfusion.WinForms.Input.Enums.CalendarViewType.Month && e.Value.Value.Date == new DateTime(2021, 04, 20))
-        //    //{
-        //    //    e.ToolTipInfo.Items[0].Text = "Valentine's Day";
-        //    //}
-        //    //if (e.ViewType == Syncfusion.WinForms.Input.Enums.CalendarViewType.Year && e.Value.Value.Month == DateTime.Now.Month)
-        //    //{
-        //    //    e.ToolTipInfo.Items[0].Text = e.Value.Value.Date.ToString("MMM");
-        //    //}
-        //    //if (e.ViewType == Syncfusion.WinForms.Input.Enums.CalendarViewType.Decade && e.RowIndex == 0)
-        //    //{
-        //    //    e.ToolTipInfo.Items[0].Text = "Decade";
-        //    //}
-        //    //if (e.ViewType == Syncfusion.WinForms.Input.Enums.CalendarViewType.Century && e.ColumnIndex == 1)
-        //    //{
-        //    //    e.ToolTipInfo.Items[0].Text = "Century";
-        //    //}
-        //}
     }
 }
