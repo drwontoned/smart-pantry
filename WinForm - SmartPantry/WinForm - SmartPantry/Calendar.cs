@@ -87,7 +87,7 @@ namespace WinForm___SmartPantry
             int amount = AmountOnADate(actualExpDate);
 
             SpecialDate date = new SpecialDate();
-            date.BackColor = System.Drawing.Color.IndianRed;
+            date.BackColor = System.Drawing.Color.LightBlue;
             date.Value = actualExpDate;
             date.ForeColor = System.Drawing.Color.Black;
             if (amount > 1)

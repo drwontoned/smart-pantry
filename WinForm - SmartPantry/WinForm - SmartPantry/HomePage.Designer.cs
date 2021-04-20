@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.viewPantryButton = new System.Windows.Forms.Button();
-            this.productManagementButton = new System.Windows.Forms.Button();
             this.viewExpirationDatesButton = new System.Windows.Forms.Button();
             this.viewShoppingListButton = new System.Windows.Forms.Button();
             this.HomePagePantry = new System.Windows.Forms.ListBox();
@@ -41,25 +40,14 @@
             // 
             this.viewPantryButton.Location = new System.Drawing.Point(408, 97);
             this.viewPantryButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.viewPantryButton.MaximumSize = new System.Drawing.Size(149, 150);
-            this.viewPantryButton.MinimumSize = new System.Drawing.Size(149, 150);
+            this.viewPantryButton.MaximumSize = new System.Drawing.Size(341, 150);
+            this.viewPantryButton.MinimumSize = new System.Drawing.Size(341, 150);
             this.viewPantryButton.Name = "viewPantryButton";
-            this.viewPantryButton.Size = new System.Drawing.Size(149, 150);
+            this.viewPantryButton.Size = new System.Drawing.Size(341, 150);
             this.viewPantryButton.TabIndex = 0;
             this.viewPantryButton.Text = "View Pantry Stock";
+            this.viewPantryButton.UseMnemonic = false;
             this.viewPantryButton.UseVisualStyleBackColor = true;
-            // 
-            // productManagementButton
-            // 
-            this.productManagementButton.Location = new System.Drawing.Point(600, 97);
-            this.productManagementButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.productManagementButton.MaximumSize = new System.Drawing.Size(149, 150);
-            this.productManagementButton.MinimumSize = new System.Drawing.Size(149, 150);
-            this.productManagementButton.Name = "productManagementButton";
-            this.productManagementButton.Size = new System.Drawing.Size(149, 150);
-            this.productManagementButton.TabIndex = 1;
-            this.productManagementButton.Text = "Add/Remove Products";
-            this.productManagementButton.UseVisualStyleBackColor = true;
             // 
             // viewExpirationDatesButton
             // 
@@ -134,7 +122,6 @@
             this.Controls.Add(this.HomePagePantry);
             this.Controls.Add(this.viewShoppingListButton);
             this.Controls.Add(this.viewExpirationDatesButton);
-            this.Controls.Add(this.productManagementButton);
             this.Controls.Add(this.viewPantryButton);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HomePage";
@@ -147,7 +134,6 @@
         #endregion
 
         private System.Windows.Forms.Button viewPantryButton;
-        private System.Windows.Forms.Button productManagementButton;
         private System.Windows.Forms.Button viewExpirationDatesButton;
         private System.Windows.Forms.Button viewShoppingListButton;
         private System.Windows.Forms.ListBox HomePagePantry;
