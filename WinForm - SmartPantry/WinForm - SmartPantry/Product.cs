@@ -41,10 +41,62 @@ namespace WinForm___SmartPantry
             this.stock = stock;
         }
 
+        public Product(string name, int stock, string type)
+        {
+            this.name = name;
+            this.stock = stock;
+            this.type = type;
+        }
+
+        public Product(string name, int stock, string type, string location)
+        {
+            this.name = name;
+            this.stock = stock;
+            this.type = type;
+            this.location = location;
+        }
+
+        public Product(string name, int stock, List<double> prices)
+        {
+            this.name = name;
+            this.stock = stock;
+            this.Prices = prices;
+        }
+
+        public Product(string name, int stock, string type, List<double> prices)
+        {
+            this.name = name;
+            this.stock = stock;
+            this.type = type;
+            this.Prices = prices;
+        }
+
+        public Product(string name, int stock, string type, string location, List<double> prices)
+        {
+            this.name = name;
+            this.stock = stock;
+            this.type = type;
+            this.location = location;
+            this.Prices = prices;
+        }
+
         // method for adding stock without expiration
         public void addStock(int newStock)
         {
             this.stock += newStock;
+        }
+
+        // method for adding stock without expiration but with a price.
+        public void addStock(int newStock, double price)
+        {
+            // Add a copy of the price to the prices list for each copy of the item.
+            for (int i = 0; i < newStock; i++)
+            {
+                this.Prices.Add(price);
+            }
+
+            // Update overall stock.
+            this.addStock(newStock);
         }
 
         // method for adding stock with expiration
@@ -76,6 +128,19 @@ namespace WinForm___SmartPantry
             this.addStock(newStock);
         }
 
+        // method for adding stock with all info
+        public void addStock(string date, int newStock, double price)
+        {
+            // Add a copy of the price to the prices list for each copy of the item.
+            for (int i = 0; i < newStock; i++)
+            {
+                this.Prices.Add(price);
+            }
+
+            // Handle date additions.
+            this.addStock(date, newStock);
+        }
+
         // method for removing stock without expiration
         public void removeStock(int newStock)
         {
@@ -88,7 +153,28 @@ namespace WinForm___SmartPantry
             }
         }
 
-        // method for adding stock with expiration
+        // method for removing stock without expiration but with a price.
+        public void removeStock(int newStock, double price)
+        {
+            int removalCount = 0;
+            int count = 0;
+            // Remove a copy of the price to the prices list for each copy of the item.
+            while(removalCount != newStock || count != this.Prices.Count)
+            {
+                if (price == this.Prices[count])
+                {
+                    this.Prices.RemoveAt(count);
+                    removalCount++;
+                }
+
+                count++;
+            }
+
+            // Update overall stock.
+            this.removeStock(newStock);
+        }
+
+        // method for removing stock with expiration
         public void removeStock(string date, int newStock)
         {
             // check if expiration date already exists
@@ -99,7 +185,7 @@ namespace WinForm___SmartPantry
                 if (expirationDates[i].Date == date)
                 {
                     int currentStock = expirationDates[i].Amount;
-                    int updatedStock = currentStock + newStock;
+                    int updatedStock = currentStock - newStock;
 
                     // if the user input to remove more stock than available set the stock to 0
                     if (updatedStock < 0)
@@ -116,8 +202,29 @@ namespace WinForm___SmartPantry
             // if expiration date does not already exist then nothing happens
         }
 
-        // method for converting the list of expiration dates to strings
-        public string getAllDates()
+        // method for removing stock with all information.
+        public void removeStock(string date, int newStock, double price)
+        {
+            int removalCount = 0;
+            int count = 0;
+            // Remove a copy of the price to the prices list for each copy of the item.
+            while (removalCount != newStock || count != this.Prices.Count)
+            {
+                if (price == this.Prices[count])
+                {
+                    this.Prices.RemoveAt(count);
+                    removalCount++;
+                }
+
+                count++;
+            }
+
+            // Handle date removals
+            this.removeStock(date, newStock);
+        }
+
+            // method for converting the list of expiration dates to strings
+            public string getAllDates()
         {
             string datesAndAmounts = string.Empty;
 
@@ -150,6 +257,7 @@ namespace WinForm___SmartPantry
             }
             return oldestDate;
         }
+
         public double getAveragePrice()
         {
             double average = 0;

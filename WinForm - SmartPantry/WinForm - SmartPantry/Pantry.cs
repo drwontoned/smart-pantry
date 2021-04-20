@@ -30,6 +30,24 @@ namespace WinForm___SmartPantry
             this.pantryList = SortList(this.pantryList);
         }
 
+        // Method for removing a product from the pantry
+        public void removeFromPantry(Product p)
+        {
+            this.pantryList.Remove(p);
+            this.pantryList = SortList(this.pantryList);
+        }
+
+        // Method for removing multiple items by index
+        public void removeMultipleByIndices(int[] indices)
+        {
+            foreach (int index in indices)
+            {
+                this.pantryList.RemoveAt(index);
+            }
+
+            this.pantryList = SortList(this.pantryList);
+        }
+
         // Method for getting a product from the pantry based on an input name
         public Product getProductByName(string name)
         {
@@ -67,7 +85,7 @@ namespace WinForm___SmartPantry
 
         // Method that sorts based on current sort type
         public List<Product> SortList(List<Product> pantryList)
-        {            
+        {
             if (this.sortType == "Alphabetical")
             {
                 return alphabetSort(pantryList);
@@ -88,12 +106,6 @@ namespace WinForm___SmartPantry
             {
                 return stockSort(pantryList);
             }
-        }
-
-        // Method to update the pantryList in the pantry;
-        public void updateList()
-        {
-            this.pantryList = SortList(this.pantryList);
         }
 
         // Method to make the pantry list descending from being previously ascending
@@ -136,7 +148,7 @@ namespace WinForm___SmartPantry
                         {
                             newList.Insert(j, pantryList[i]);
                             j = currentCount;
-                            
+
                         }
 
                         // otherwise pantry lists name comes after
