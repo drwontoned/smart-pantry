@@ -22,11 +22,11 @@ namespace WinForm___SmartPantry
         public List<String> specialDateInfo = new List<String>();
         public DateTime currentDate;
         
-        public Calendar(HomePage home)
+        public Calendar(Pantry pantry)
         {
             InitializeComponent();
-            this.home = home;
-            this.PersonsPantry = home.PersonsPantry;
+            //this.home = home;
+            this.PersonsPantry = pantry;
             MakeAllSpecialDates();
             //richTextBox1.Text = "INIT";
             //sfCalendar1.AllowMultipleSelection = true;            
@@ -141,10 +141,11 @@ namespace WinForm___SmartPantry
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            this.home.Location = this.Location;
-            this.home.StartPosition = FormStartPosition.Manual;
-            this.home.FormClosing += delegate { this.Show(); };
-            this.home.Show();
+            var frm = new HomePage(this.PersonsPantry);
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
             this.Hide();
         }
 
@@ -222,25 +223,32 @@ namespace WinForm___SmartPantry
 
         private void removebutton_Click(object sender, EventArgs e)
         {
-            if (SpecialDates.Count > 0)
+            for (int i = 0; i< this.SpecialDates.Count; i++)
             {
-                if (SpecialDates[0].Value == currentDate)
+                if (this.SpecialDates[i].Value == currentDate)
                 {
-                    SpecialDates.Remove(SpecialDates[0]);
-                    specialDateInfo.Remove(specialDateInfo[0]);
-                    removebutton.Enabled = false;
-                    richTextBox1.Text = "";
-                }
-                else if (SpecialDates[1].Value == currentDate)
-                {
-                    SpecialDates.Remove(SpecialDates[1]);
-                    specialDateInfo.Remove(specialDateInfo[1]);
-                    removebutton.Enabled = false;
-                    richTextBox1.Text = "";
+                    this.SpecialDates.Remove(SpecialDates[i]);
+                    this.specialDateInfo.Remove(specialDateInfo[i]);
                 }
             }
-            else
-                return;
+            
+            removebutton.Enabled = false;
+            richTextBox1.Text = "";
+
+            for (int i = 0; i < this.PersonsPantry.getPantrySize(); i++)
+            {
+                Product currentProduct = this.PersonsPantry.PantryList[i];
+                if (currentProduct.ExpirationDates.Count > 0)
+                {
+                    for (int j = 0; j < currentProduct.ExpirationDates.Count; j++)
+                    {
+                        if (currentProduct.ExpirationDates[j].ActualDate == currentDate)
+                        {
+                            currentProduct.removeStock(currentProduct.ExpirationDates[j].Date, currentProduct.ExpirationDates[j].Amount);
+                        }
+                    }
+                }
+            }
         }
     }
 }
