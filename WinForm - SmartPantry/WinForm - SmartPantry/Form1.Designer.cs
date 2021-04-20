@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.HomePagePantry = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.expirationsBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // button1
@@ -82,15 +83,15 @@
             // 
             // HomePagePantry
             // 
-            this.HomePagePantry.Font = new System.Drawing.Font("Consolas", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePagePantry.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomePagePantry.FormattingEnabled = true;
-            this.HomePagePantry.ItemHeight = 27;
+            this.HomePagePantry.ItemHeight = 23;
             this.HomePagePantry.Location = new System.Drawing.Point(12, 53);
             this.HomePagePantry.MaximumSize = new System.Drawing.Size(350, 382);
             this.HomePagePantry.MinimumSize = new System.Drawing.Size(350, 382);
             this.HomePagePantry.Name = "HomePagePantry";
             this.HomePagePantry.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.HomePagePantry.Size = new System.Drawing.Size(350, 382);
+            this.HomePagePantry.Size = new System.Drawing.Size(350, 372);
             this.HomePagePantry.TabIndex = 4;
             // 
             // label1
@@ -99,15 +100,29 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(55, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(255, 39);
+            this.label1.Size = new System.Drawing.Size(248, 38);
             this.label1.TabIndex = 5;
             this.label1.Text = "Person\'s Pantry";
+            // 
+            // expirationsBox
+            // 
+            this.expirationsBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationsBox.ForeColor = System.Drawing.Color.Blue;
+            this.expirationsBox.FormattingEnabled = true;
+            this.expirationsBox.ItemHeight = 20;
+            this.expirationsBox.Location = new System.Drawing.Point(408, 24);
+            this.expirationsBox.MaximumSize = new System.Drawing.Size(342, 44);
+            this.expirationsBox.MinimumSize = new System.Drawing.Size(342, 44);
+            this.expirationsBox.Name = "expirationsBox";
+            this.expirationsBox.Size = new System.Drawing.Size(342, 44);
+            this.expirationsBox.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 453);
+            this.Controls.Add(this.expirationsBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HomePagePantry);
             this.Controls.Add(this.button4);
@@ -129,6 +144,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox HomePagePantry;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox expirationsBox;
     }
 }
 
