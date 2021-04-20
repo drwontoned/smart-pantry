@@ -43,10 +43,11 @@ namespace WinForm___SmartPantry
         // Event when the Home button is clicked
         private void homeButton_Click(object sender, EventArgs e)
         {
-            this.home.Location = this.Location;
-            this.home.StartPosition = FormStartPosition.Manual;
-            this.home.FormClosing += delegate { this.Show(); };
-            this.home.Show();
+            var frm = new HomePage(this.pantryList);
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
             this.Hide();
         }
 
