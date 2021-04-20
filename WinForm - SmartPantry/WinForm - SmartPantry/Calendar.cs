@@ -245,6 +245,10 @@ namespace WinForm___SmartPantry
                         if (currentProduct.ExpirationDates[j].ActualDate == currentDate)
                         {
                             currentProduct.removeStock(currentProduct.ExpirationDates[j].Date, currentProduct.ExpirationDates[j].Amount);
+                            if (currentProduct.Stock == 0)
+                            {
+                                this.PersonsPantry.removeFromPantry(currentProduct);
+                            }
                         }
                     }
                 }
