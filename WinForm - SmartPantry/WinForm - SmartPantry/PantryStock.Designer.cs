@@ -51,8 +51,10 @@ namespace WinForm___SmartPantry
             this.locationColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pantryStockGroupBox = new System.Windows.Forms.GroupBox();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.newProduct = new System.Windows.Forms.Button();
             this.searchForProductLabel = new System.Windows.Forms.Label();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.removeProduct = new System.Windows.Forms.Button();
             this.actionsGroupBox.SuspendLayout();
             this.sortOptionsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -62,10 +64,10 @@ namespace WinForm___SmartPantry
             // homeButton
             // 
             this.homeButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.homeButton.Location = new System.Drawing.Point(12, 12);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.homeButton.Location = new System.Drawing.Point(6, 6);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(2);
             this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(188, 86);
+            this.homeButton.Size = new System.Drawing.Size(94, 45);
             this.homeButton.TabIndex = 2;
             this.homeButton.Text = "Return Home";
             this.homeButton.UseVisualStyleBackColor = false;
@@ -75,10 +77,9 @@ namespace WinForm___SmartPantry
             // 
             this.personsPantryLabel.AutoSize = true;
             this.personsPantryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F);
-            this.personsPantryLabel.Location = new System.Drawing.Point(481, 14);
-            this.personsPantryLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.personsPantryLabel.Location = new System.Drawing.Point(240, 6);
             this.personsPantryLabel.Name = "personsPantryLabel";
-            this.personsPantryLabel.Size = new System.Drawing.Size(398, 61);
+            this.personsPantryLabel.Size = new System.Drawing.Size(205, 31);
             this.personsPantryLabel.TabIndex = 4;
             this.personsPantryLabel.Text = "Person\'s Pantry";
             // 
@@ -88,10 +89,9 @@ namespace WinForm___SmartPantry
             this.alphaCheckBox.Checked = true;
             this.alphaCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.alphaCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alphaCheckBox.Location = new System.Drawing.Point(9, 33);
-            this.alphaCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.alphaCheckBox.Location = new System.Drawing.Point(4, 17);
             this.alphaCheckBox.Name = "alphaCheckBox";
-            this.alphaCheckBox.Size = new System.Drawing.Size(75, 27);
+            this.alphaCheckBox.Size = new System.Drawing.Size(41, 14);
             this.alphaCheckBox.TabIndex = 9;
             this.alphaCheckBox.Text = "A - Z";
             this.alphaCheckBox.UseVisualStyleBackColor = true;
@@ -101,10 +101,9 @@ namespace WinForm___SmartPantry
             // 
             this.typeCheckBox.AutoSize = true;
             this.typeCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeCheckBox.Location = new System.Drawing.Point(9, 77);
-            this.typeCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.typeCheckBox.Location = new System.Drawing.Point(4, 40);
             this.typeCheckBox.Name = "typeCheckBox";
-            this.typeCheckBox.Size = new System.Drawing.Size(75, 27);
+            this.typeCheckBox.Size = new System.Drawing.Size(41, 14);
             this.typeCheckBox.TabIndex = 10;
             this.typeCheckBox.Text = "Type";
             this.typeCheckBox.UseVisualStyleBackColor = true;
@@ -114,10 +113,9 @@ namespace WinForm___SmartPantry
             // 
             this.locationCheckBox.AutoSize = true;
             this.locationCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationCheckBox.Location = new System.Drawing.Point(9, 121);
-            this.locationCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.locationCheckBox.Location = new System.Drawing.Point(4, 63);
             this.locationCheckBox.Name = "locationCheckBox";
-            this.locationCheckBox.Size = new System.Drawing.Size(102, 27);
+            this.locationCheckBox.Size = new System.Drawing.Size(52, 14);
             this.locationCheckBox.TabIndex = 11;
             this.locationCheckBox.Text = "Location";
             this.locationCheckBox.UseVisualStyleBackColor = true;
@@ -127,10 +125,9 @@ namespace WinForm___SmartPantry
             // 
             this.expirationCheckBox.AutoSize = true;
             this.expirationCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expirationCheckBox.Location = new System.Drawing.Point(9, 166);
-            this.expirationCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.expirationCheckBox.Location = new System.Drawing.Point(4, 86);
             this.expirationCheckBox.Name = "expirationCheckBox";
-            this.expirationCheckBox.Size = new System.Drawing.Size(111, 27);
+            this.expirationCheckBox.Size = new System.Drawing.Size(58, 14);
             this.expirationCheckBox.TabIndex = 12;
             this.expirationCheckBox.Text = "Expiration";
             this.expirationCheckBox.UseVisualStyleBackColor = true;
@@ -140,10 +137,9 @@ namespace WinForm___SmartPantry
             // 
             this.stockCheckBox.AutoSize = true;
             this.stockCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockCheckBox.Location = new System.Drawing.Point(9, 210);
-            this.stockCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.stockCheckBox.Location = new System.Drawing.Point(4, 109);
             this.stockCheckBox.Name = "stockCheckBox";
-            this.stockCheckBox.Size = new System.Drawing.Size(82, 27);
+            this.stockCheckBox.Size = new System.Drawing.Size(43, 14);
             this.stockCheckBox.TabIndex = 13;
             this.stockCheckBox.Text = "Stock";
             this.stockCheckBox.UseVisualStyleBackColor = true;
@@ -155,10 +151,9 @@ namespace WinForm___SmartPantry
             this.ascendingCheckBox.Checked = true;
             this.ascendingCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ascendingCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ascendingCheckBox.Location = new System.Drawing.Point(9, 259);
-            this.ascendingCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.ascendingCheckBox.Location = new System.Drawing.Point(4, 135);
             this.ascendingCheckBox.Name = "ascendingCheckBox";
-            this.ascendingCheckBox.Size = new System.Drawing.Size(116, 27);
+            this.ascendingCheckBox.Size = new System.Drawing.Size(59, 14);
             this.ascendingCheckBox.TabIndex = 14;
             this.ascendingCheckBox.Text = "Ascending";
             this.ascendingCheckBox.UseVisualStyleBackColor = true;
@@ -167,10 +162,9 @@ namespace WinForm___SmartPantry
             // 
             this.descendingCheckBox.AutoSize = true;
             this.descendingCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descendingCheckBox.Location = new System.Drawing.Point(9, 303);
-            this.descendingCheckBox.Margin = new System.Windows.Forms.Padding(6);
+            this.descendingCheckBox.Location = new System.Drawing.Point(4, 158);
             this.descendingCheckBox.Name = "descendingCheckBox";
-            this.descendingCheckBox.Size = new System.Drawing.Size(126, 27);
+            this.descendingCheckBox.Size = new System.Drawing.Size(64, 14);
             this.descendingCheckBox.TabIndex = 15;
             this.descendingCheckBox.Text = "Descending";
             this.descendingCheckBox.UseVisualStyleBackColor = true;
@@ -180,21 +174,25 @@ namespace WinForm___SmartPantry
             this.actionsGroupBox.Controls.Add(this.removeButton);
             this.actionsGroupBox.Controls.Add(this.sortOptionsGroupBox);
             this.actionsGroupBox.Controls.Add(this.addButton);
-            this.actionsGroupBox.Location = new System.Drawing.Point(12, 104);
+            this.actionsGroupBox.Location = new System.Drawing.Point(6, 54);
+            this.actionsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.actionsGroupBox.Name = "actionsGroupBox";
-            this.actionsGroupBox.Size = new System.Drawing.Size(188, 588);
+            this.actionsGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.actionsGroupBox.Size = new System.Drawing.Size(94, 306);
             this.actionsGroupBox.TabIndex = 16;
             this.actionsGroupBox.TabStop = false;
             // 
             // removeButton
             // 
             this.removeButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.removeButton.Location = new System.Drawing.Point(6, 144);
+            this.removeButton.Location = new System.Drawing.Point(3, 75);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(2);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(176, 93);
+            this.removeButton.Size = new System.Drawing.Size(88, 48);
             this.removeButton.TabIndex = 3;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = false;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // sortOptionsGroupBox
             // 
@@ -205,9 +203,11 @@ namespace WinForm___SmartPantry
             this.sortOptionsGroupBox.Controls.Add(this.stockCheckBox);
             this.sortOptionsGroupBox.Controls.Add(this.expirationCheckBox);
             this.sortOptionsGroupBox.Controls.Add(this.locationCheckBox);
-            this.sortOptionsGroupBox.Location = new System.Drawing.Point(12, 244);
+            this.sortOptionsGroupBox.Location = new System.Drawing.Point(6, 127);
+            this.sortOptionsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.sortOptionsGroupBox.Name = "sortOptionsGroupBox";
-            this.sortOptionsGroupBox.Size = new System.Drawing.Size(170, 338);
+            this.sortOptionsGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.sortOptionsGroupBox.Size = new System.Drawing.Size(85, 176);
             this.sortOptionsGroupBox.TabIndex = 17;
             this.sortOptionsGroupBox.TabStop = false;
             this.sortOptionsGroupBox.Text = "Sort Products";
@@ -215,12 +215,14 @@ namespace WinForm___SmartPantry
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.addButton.Location = new System.Drawing.Point(6, 30);
+            this.addButton.Location = new System.Drawing.Point(3, 16);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(176, 93);
+            this.addButton.Size = new System.Drawing.Size(88, 48);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // pantryStockListView
             // 
@@ -233,14 +235,14 @@ namespace WinForm___SmartPantry
             this.pantryStockListView.FullRowSelect = true;
             this.pantryStockListView.GridLines = true;
             this.pantryStockListView.HideSelection = false;
-            this.pantryStockListView.Location = new System.Drawing.Point(31, 117);
-            this.pantryStockListView.Margin = new System.Windows.Forms.Padding(6);
+            this.pantryStockListView.Location = new System.Drawing.Point(16, 74);
             this.pantryStockListView.MultiSelect = false;
             this.pantryStockListView.Name = "pantryStockListView";
-            this.pantryStockListView.Size = new System.Drawing.Size(889, 483);
+            this.pantryStockListView.Size = new System.Drawing.Size(446, 240);
             this.pantryStockListView.TabIndex = 6;
             this.pantryStockListView.UseCompatibleStateImageBehavior = false;
             this.pantryStockListView.View = System.Windows.Forms.View.Details;
+            this.pantryStockListView.SelectedIndexChanged += new System.EventHandler(this.pantryStockListView_SelectedIndexChanged);
             // 
             // initialColumnHeader
             // 
@@ -274,44 +276,65 @@ namespace WinForm___SmartPantry
             // pantryStockGroupBox
             // 
             this.pantryStockGroupBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pantryStockGroupBox.Controls.Add(this.removeProduct);
+            this.pantryStockGroupBox.Controls.Add(this.newProduct);
             this.pantryStockGroupBox.Controls.Add(this.pantryStockListView);
             this.pantryStockGroupBox.Controls.Add(this.searchForProductLabel);
             this.pantryStockGroupBox.Controls.Add(this.searchTextBox);
-            this.pantryStockGroupBox.Location = new System.Drawing.Point(219, 78);
+            this.pantryStockGroupBox.Location = new System.Drawing.Point(110, 39);
+            this.pantryStockGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.pantryStockGroupBox.Name = "pantryStockGroupBox";
-            this.pantryStockGroupBox.Size = new System.Drawing.Size(946, 614);
+            this.pantryStockGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.pantryStockGroupBox.Size = new System.Drawing.Size(473, 321);
             this.pantryStockGroupBox.TabIndex = 17;
             this.pantryStockGroupBox.TabStop = false;
             // 
-            // searchTextBox
+            // newProduct
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(31, 33);
-            this.searchTextBox.Margin = new System.Windows.Forms.Padding(6);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(889, 31);
-            this.searchTextBox.TabIndex = 5;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            this.newProduct.Location = new System.Drawing.Point(16, 38);
+            this.newProduct.Name = "newProduct";
+            this.newProduct.Size = new System.Drawing.Size(446, 30);
+            this.newProduct.TabIndex = 8;
+            this.newProduct.Text = "Add New Product";
+            this.newProduct.UseVisualStyleBackColor = true;
+            this.newProduct.Visible = false;
+            this.newProduct.Click += new System.EventHandler(this.newProduct_Click);
             // 
             // searchForProductLabel
             // 
             this.searchForProductLabel.AutoSize = true;
-            this.searchForProductLabel.Location = new System.Drawing.Point(26, 8);
-            this.searchForProductLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.searchForProductLabel.Location = new System.Drawing.Point(13, 4);
             this.searchForProductLabel.Name = "searchForProductLabel";
-            this.searchForProductLabel.Size = new System.Drawing.Size(209, 25);
+            this.searchForProductLabel.Size = new System.Drawing.Size(105, 13);
             this.searchForProductLabel.TabIndex = 7;
             this.searchForProductLabel.Text = "Search for Product...";
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(16, 17);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(446, 20);
+            this.searchTextBox.TabIndex = 5;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            // 
+            // removeProduct
+            // 
+            this.removeProduct.Location = new System.Drawing.Point(17, 41);
+            this.removeProduct.Name = "removeProduct";
+            this.removeProduct.Size = new System.Drawing.Size(444, 26);
+            this.removeProduct.TabIndex = 9;
+            this.removeProduct.Text = "Remove Product";
+            this.removeProduct.UseVisualStyleBackColor = true;
+            // 
             // PantryStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 708);
+            this.ClientSize = new System.Drawing.Size(586, 368);
             this.Controls.Add(this.pantryStockGroupBox);
             this.Controls.Add(this.actionsGroupBox);
             this.Controls.Add(this.personsPantryLabel);
             this.Controls.Add(this.homeButton);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "PantryStock";
             this.Text = "PantryStock";
             this.actionsGroupBox.ResumeLayout(false);
@@ -350,5 +373,7 @@ namespace WinForm___SmartPantry
         private System.Windows.Forms.GroupBox pantryStockGroupBox;
         private System.Windows.Forms.Label searchForProductLabel;
         private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.Button newProduct;
+        private System.Windows.Forms.Button removeProduct;
     }
 }

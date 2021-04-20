@@ -61,6 +61,7 @@ namespace WinForm___SmartPantry
                 this.pantryList.removeByIndex(topItemPantryIndex);
                 this.pantryList.addToPantry(topProduct);
             }
+            
 
             this.pantryStockListView.Update();
         }
@@ -133,6 +134,35 @@ namespace WinForm___SmartPantry
                 this.pantryStockListView.Items.Clear();
                 this.buildListView();
             }
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            newProduct.Visible = true;
+            removeProduct.Visible = false;
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            newProduct.Visible = false;
+            removeProduct.Visible = false;
+        }
+
+
+        private void pantryStockListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void newProduct_Click(object sender, EventArgs e)
+        {
+            // make sure the text is finished first before clicking add
+            // ListViewItem addItem = this.pantryStockListView.FindItemWithText(searchTextBox.Text, true, 0, true);
+            if (this.searchTextBox.Text.Length > 0)
+            {
+                this.pantryStockListView.Items.Add(searchTextBox.Text);
+            }
+            this.pantryStockListView.Update();
         }
     }
 }
