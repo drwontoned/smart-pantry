@@ -58,6 +58,8 @@ namespace WinForm___SmartPantry
             this.sfCalendar1.SelectionChanging += sfCalendar1_SelectionChanging;
             this.sfCalendar1.SelectionChanged += sfCalendar1_SelectionChanged;
             this.sfCalendar1.CellClick += sfCalendar1_CellClick;
+            //this.sfCalendar1.DrawCell += SfCalendar_ToolTipOpening;
+            //this.sfCalendar1.ToolTipOpening += SfCalendar_ToolTipOpening;
             // 
             // textBox1
             // 
