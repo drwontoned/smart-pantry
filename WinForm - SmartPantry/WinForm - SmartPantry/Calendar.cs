@@ -17,17 +17,20 @@ namespace WinForm___SmartPantry
     public partial class Calendar : Form
     {
         public Pantry PersonsShoppinglist = new Pantry();
-        private HomePage home;
+        public HomePage home;
         public List<SpecialDate> SpecialDates = new List<SpecialDate>();
+        public List<String> specialDateInfo = new List<String>();
+        public DateTime currentDate;
         
         public Calendar(HomePage home)
         {
             InitializeComponent();
             createSpecialDates();
-            textBox1.Text = "INIT";
+            richTextBox1.Text = "INIT";
             //sfCalendar1.AllowMultipleSelection = true;
             this.home = home;
             sfCalendar1.ShowToolTip = true;
+            removebutton.Enabled = false;
 
 
 
@@ -43,6 +46,7 @@ namespace WinForm___SmartPantry
             specialDate1.ForeColor = System.Drawing.Color.Black;
             specialDate1.Description = "1 expiring item";
             specialDate1.IsDateVisible = true;
+            string specialDate1Info = "Item: Bread\nLocation: Cupboard\nAmount: 1";
 
             SpecialDate specialDate2 = new SpecialDate();
             specialDate2.BackColor = System.Drawing.Color.IndianRed;
@@ -51,10 +55,14 @@ namespace WinForm___SmartPantry
             specialDate2.ForeColor = System.Drawing.Color.Black;
             specialDate2.Description = "1 expiring item";
             specialDate2.IsDateVisible = true;
+            string specialDate2Info = "Item: Milk\nLocation: Fridge\nAmount: 1";
 
             SpecialDates.Add(specialDate1);
             SpecialDates.Add(specialDate2);
             this.sfCalendar1.SpecialDates = SpecialDates;
+
+            specialDateInfo.Add(specialDate1Info);
+            specialDateInfo.Add(specialDate2Info);
         }
 
         //public List<SpecialDate> SpecialDates { get; set; }
@@ -81,9 +89,18 @@ namespace WinForm___SmartPantry
         // Occurs after the selected date is changed in Calendar.
         private void sfCalendar1_SelectionChanged(SfCalendar sender, Syncfusion.WinForms.Input.Events.SelectionChangedEventArgs e)
         {
+            // this.sfCalendar1.SelectionChanged += sfCalendar1_SelectionChanged;
+
             var newDate = e.NewValue;
-            var oldDate = e.OldValue;
-            //textBox1.Text = "POG2";
+            
+            //var oldDate = e.OldValue;
+            
+            if (newDate != null)
+            {
+                currentDate = (DateTime)newDate;
+            }
+            //textBox1.Text = currentDate.ToString();
+
         }
 
         private void sfCalendar1_Click(object sender, EventArgs e)
@@ -93,20 +110,78 @@ namespace WinForm___SmartPantry
 
         private void sfCalendar1_CellClick(object sender, Syncfusion.WinForms.Input.Events.CalendarCellEventArgs e)
         {
+            //this.sfCalendar1.CellClick += sfCalendar1_CellClick;
+
             // e.DateRange - Start and end range value of clicked cell
             // e.IsBlackoutDate - Indicate whether the date cell is BlackoutDate
             // e.IsSpecialDate - Indicate whether the date cell is SpecialDate
-            // e.IsWeekNumber - Indicate whether the date cell is WeekNumber
-            textBox1.Text = sfCalendar1.ViewMode.ToString();
-            
-            //e.Text = "TEST";
+            // e.IsWeekNumber - Indicate whether the date cell is WeekNumber            
+            // e.Text = "TEST";
             // e.Value - Clicked cell date value
             // e.ViewType - Specifies the calendar viewtype
+
+            if (e.IsSpecialDate == true)
+            {
+                removebutton.Enabled = true;
+                //textBox1.Text = SpecialDates[0].Value.ToString();
+
+                if (SpecialDates.Count > 0)
+                {
+                    //if (SpecialDates[0].Value == currentDate)
+                    //{
+                    //    richTextBox1.Text = specialDateInfo[0];
+                    //}
+                    //else if (SpecialDates[1].Value == currentDate)
+                    //{
+                    //    richTextBox1.Text = specialDateInfo[1];
+                    //}
+                    int count = 0;
+                    foreach (SpecialDate dat in SpecialDates)
+                    {
+                        if (dat.Value == currentDate)
+                        {
+                            richTextBox1.Text = specialDateInfo[count];
+
+                        }
+                        count++;
+                    }
+                }
+                else
+                    return;
+            }
+            else
+            {
+                removebutton.Enabled = false;
+                richTextBox1.Text = "";
+            }
+        }
+
+        private void removebutton_Click(object sender, EventArgs e)
+        {
+            if (SpecialDates.Count > 0)
+            {
+                if (SpecialDates[0].Value == currentDate)
+                {
+                    SpecialDates.Remove(SpecialDates[0]);
+                    specialDateInfo.Remove(specialDateInfo[0]);
+                    removebutton.Enabled = false;
+                    richTextBox1.Text = "";
+                }
+                else if (SpecialDates[1].Value == currentDate)
+                {
+                    SpecialDates.Remove(SpecialDates[1]);
+                    specialDateInfo.Remove(specialDateInfo[1]);
+                    removebutton.Enabled = false;
+                    richTextBox1.Text = "";
+                }
+            }
+            else
+                return;
         }
 
         //private void SfCalendar_ToolTipOpening(SfCalendar sender, Syncfusion.WinForms.Input.Events.ToolTipOpeningEventArgs e)
         //{
-            
+
         //    if (e.Value.Value.Date == new DateTime(2021, 04, 20))
         //    {
         //        e.ToolTipInfo.Items[0].Text = "Valentine's Day";
